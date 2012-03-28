@@ -31,4 +31,18 @@
       <url>file:${project.basedir}/../site/${pom.artifactId}</url>
     </site>
   </distributionManagement>
+  <reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+                <links>
+                    <link>http://docs.oracle.com/javase/7/docs/api/</link>
+                    <link>gosia-wielgus.github.com/jms-brokers/server/apidocs/index.html</link>
+                </links>
+            </configuration>
+        </plugin>
+    </plugins>
+  </reporting>
 </project>
