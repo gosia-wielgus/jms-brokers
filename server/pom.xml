@@ -20,4 +20,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <url>file:${project.basedir}/../site/${pom.artifactId}</url>
+    </site>
+  </distributionManagement>
 </project>

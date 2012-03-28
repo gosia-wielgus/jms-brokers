@@ -10,5 +10,11 @@
   <modules>
     <module>server</module>
     <module>client-jsf</module>
-  </modules>  
+  </modules>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <url>file:${project.basedir}/site</url>
+    </site>
+  </distributionManagement>
 </project>
