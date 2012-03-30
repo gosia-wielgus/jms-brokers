@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>server</module>
-    <module>client-jsf</module>
+    <module>client</module>
   </modules>
   <distributionManagement>
     <site>
