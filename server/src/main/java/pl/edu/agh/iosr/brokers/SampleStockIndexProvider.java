@@ -16,22 +16,7 @@ public class SampleStockIndexProvider extends AbstractStockIndexProvider {
 		try {
 			while (!Thread.interrupted()) {
 				final long timestamp = new Date().getTime();
-				dispatch(new StockIndex(){
-
-					@Override
-					public String getName() {
-						return "SampleStockIndex";
-					}
-
-					@Override
-					public BigDecimal getValue() {
-						return new BigDecimal("1234.5678");
-					}
-
-					@Override
-					public long getTimestamp() {
-						return timestamp;
-					}});
+				dispatch(new StockIndex("SampleStockIndex", new BigDecimal("1234.5678"), timestamp));
 				Thread.sleep(interval);
 			}
 		} catch (InterruptedException e) {
