@@ -11,6 +11,14 @@
     <module>server</module>
     <module>client</module>
   </modules>
+  
+  <repositories>
+    <repository>
+        <id>repository.jboss.org-public</id>
+        <name>JBoss repository</name>
+        <url>http://repository.jboss.org/nexus/content/groups/public</url>
+    </repository>
+  </repositories>
   <distributionManagement>
     <site>
       <id>gh-pages</id>
