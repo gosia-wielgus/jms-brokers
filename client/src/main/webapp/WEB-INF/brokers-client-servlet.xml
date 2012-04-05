@@ -11,4 +11,9 @@
       <property name="prefix" value="/WEB-INF/jsp/"></property>
       <property name="suffix" value=".jsp"></property>        
   </bean>
+  <bean id="dao" class="pl.edu.agh.iosr.brokers.MemoryStockIndexDao">
+  </bean>
+  <bean id="listener" class="pl.edu.agh.iosr.brokers.JMSStockIndexListener">
+  	<property name="dao" ref="dao"></property>
+  </bean>
 </beans>

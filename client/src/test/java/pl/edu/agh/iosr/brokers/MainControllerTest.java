@@ -1,12 +1,9 @@
 package pl.edu.agh.iosr.brokers;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.springframework.web.servlet.ModelAndView;
-import static org.junit.Assert.*;
 
 public class MainControllerTest {
 	@Test
