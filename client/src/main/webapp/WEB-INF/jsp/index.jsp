@@ -1,10 +1,25 @@
-<%@ page session="false"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ include file="/WEB-INF/jsp/include.jsp" %>
 <html>
   <head><title>Example :: Spring Application</title></head>
   <body>
     <h1>Example - Spring Application</h1>
-    <p>This is the latest JMS message (gathered synchronously): [<c:out value="${variable}"/>]</p>
+    <table>
+    <tr><th>Index name</th><th>Index value</th><th>Timestamp</th></tr>
+    <c:forEach items="${model.currentIndices}" var="index">
+      <tr>
+        <td>
+        <c:out value="${index.name}"/>
+        </td>
+        <td>
+        <c:out value="${index.value}"/>
+        </td>
+        <td>   
+        <c:set var="time" value="${index.timestamp}" />
+        <%
+            out.print(new java.util.Date((Long)pageContext.findAttribute("time")));
+        %>
+        </td>
+     </tr>
+    </c:forEach>
   </body>
 </html>

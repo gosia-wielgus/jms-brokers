@@ -16,16 +16,19 @@ import static org.junit.Assert.*;
 
 public class SampleStockIndexProviderTest {
 	private static final int INTERVAL = 10;
+	private static final int EVENTS = 3;
 	SampleStockIndexProvider provider;
+	List<StockIndex> indices = new ArrayList<StockIndex>();
 	
 	@Before
 	public void setUp() {
-		provider = new SampleStockIndexProvider(INTERVAL);
+		indices.add(new StockIndex("pl.wig", "WIG", "10000", 0));
+		indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", 0));
+		provider = new SampleStockIndexProvider(INTERVAL, indices);
 	}
 	
 	@Test
 	public void testDispatch() throws Exception{
-		final int events = 3;
 		final Semaphore semaphore = new Semaphore(1);
 		semaphore.acquire();
 		final List<StockIndex> indexList = Collections.synchronizedList(new ArrayList<StockIndex>());
@@ -34,7 +37,7 @@ public class SampleStockIndexProviderTest {
 			@Override
 			public void onStockIndex(StockIndex index) {
 				indexList.add(index);
-				if (indexList.size() == events) {
+				if (indexList.size() == EVENTS*indices.size()) {
 					semaphore.release();
 				}
 			}
@@ -46,11 +49,11 @@ public class SampleStockIndexProviderTest {
 		provider.stop();
 		long endTime = new Date().getTime();
 		
-		assertEquals(3, indexList.size());
-		for (StockIndex index : indexList) {
-
-			assertEquals("SampleStockIndex", index.getName());
-			assertEquals(new BigDecimal("1234.5678"), index.getValue());
+		assertEquals(EVENTS*indices.size(), indexList.size());
+		for (int i=0; i<indexList.size(); i++) {
+			StockIndex index = indexList.get(i);
+			assertEquals(indices.get(i%indices.size()).getKey(), index.getKey());
+			//assertEquals(new BigDecimal("1234.5678"), index.getValue());
 			long time = index.getTimestamp();
 			assertTrue(startTime <= time && time <= endTime);
 		}

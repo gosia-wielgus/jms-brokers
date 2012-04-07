@@ -1,5 +1,7 @@
 package pl.edu.agh.iosr.brokers;
 
+import java.util.List;
+
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;
@@ -12,13 +14,14 @@ import javax.jms.Topic;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 public class StockIndexSubscriber {
-	MessageConsumer consumer;
-	Session session;
-	Connection connection;
-	String url;
-	
-	public StockIndexSubscriber(String url) {
+	private MessageConsumer consumer;
+	private Session session;
+	private Connection connection;
+	private String url;
+	private List<String> stockNames;
+	public StockIndexSubscriber(String url, List<String> stockNames) {
 		this.url = url;
+		this.stockNames = stockNames;
 	}
 	
 	public void start() throws JMSException {
@@ -34,8 +37,13 @@ public class StockIndexSubscriber {
         // Create a Session
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
+        String topics = "";
+        for (String name : stockNames) {
+        	topics += ",brokers."+name;
+        }
+        topics = topics.substring(1);
         // Create the destination (Topic or Queue)
-        Topic destination = session.createTopic("TEST.FOO");
+        Topic destination = session.createTopic(topics);
 
         // Create a MessageConsumer from the Session to the Topic or Queue
         consumer = session.createConsumer(destination);

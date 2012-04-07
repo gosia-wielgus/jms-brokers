@@ -1,5 +1,8 @@
 package pl.edu.agh.iosr.brokers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;
 import javax.jms.Destination;
@@ -14,9 +17,9 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 public class StockIndexPublisher {
 	private Session session;
-	private MessageProducer producer;
 	private Connection connection;
-	String url;
+	private Map<String, MessageProducer> producers = new HashMap<String, MessageProducer>();
+	private String url;
 	
 	public StockIndexPublisher(String url) {
 		this.url = url;
@@ -32,14 +35,23 @@ public class StockIndexPublisher {
 
         // Create a Session
         session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+	}
 
-        // Create the destination (Topic or Queue)
-        Topic destination = session.createTopic("TEST.FOO");
-
+	private MessageProducer createTopic(String name) throws JMSException {
+		// Create the destination (Topic or Queue)
+        Topic destination = session.createTopic(name);
+        
         // Create a MessageProducer from the Session to the Topic or Queue
-        producer = session.createProducer(destination);
+        MessageProducer producer = session.createProducer(destination);
         producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-
+        producers.put(name, producer);
+        return producer;
+	}
+	
+	private MessageProducer getProducer(String topicName) throws JMSException {
+		if (producers.containsKey(topicName))
+			return producers.get(topicName);
+		return createTopic(topicName);
 	}
 	
 	public void close() throws JMSException {
@@ -48,6 +60,8 @@ public class StockIndexPublisher {
 	}
 	
 	public void send(StockIndex index) throws JMSException {
+		MessageProducer producer = getProducer("brokers." + index.getKey());
+		
         ObjectMessage message = (ObjectMessage) session.createObjectMessage(index);
 
         System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());

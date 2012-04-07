@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-
-  <bean name="/index.htm" class="pl.edu.agh.iosr.brokers.MainController"/>
-  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
-      <property name="prefix" value="/WEB-INF/jsp/"></property>
-      <property name="suffix" value=".jsp"></property>        
-  </bean>
-  <bean id="dao" class="pl.edu.agh.iosr.brokers.MemoryStockIndexDao">
-  </bean>
-  <bean id="listener" class="pl.edu.agh.iosr.brokers.JMSStockIndexListener">
-  	<property name="dao" ref="dao"></property>
-  </bean>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jms="http://www.springframework.org/schema/jms"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd">
+	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="tcp://localhost:61616" />
+	</bean>
+	<bean id="jmsContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="destination" />
+		<property name="messageListener" ref="listener" />
+	</bean>
+    <bean id="controller" name="/index.htm"
+        class="pl.edu.agh.iosr.brokers.MainController">
+        <property name="dao" ref="dao"></property>
+    </bean>
+    <bean id="logincontroller" name="/login.htm"
+        class="pl.edu.agh.iosr.brokers.LoginController">
+        <property name="dao" ref="dao"></property>
+    </bean>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+    <bean id="dao" class="pl.edu.agh.iosr.brokers.MemoryStockIndexDao">
+    </bean>
+    <bean id="cntcfg" class="pl.edu.agh.iosr.brokers.ContainerConfig" autowire="byType">
+    </bean>
+	<bean id="listener" class="pl.edu.agh.iosr.brokers.JMSStockIndexListener">
+		<property name="dao" ref="dao"></property>
+	</bean>
+	
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="brokers.pl.wig20,brokers.pl.wig" />
+    </bean>
+	<!-- <jms:listener-container connection-factory="connectionFactory" destination-type="topic">
+        <jms:listener destination="TEST.FOO" ref="listener" />      <jms:listener destination="TEST2.FOO" ref="listener" />
+	</jms:listener-container>-->
 </beans>

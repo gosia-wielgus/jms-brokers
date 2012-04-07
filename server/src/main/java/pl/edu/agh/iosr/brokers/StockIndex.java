@@ -5,27 +5,36 @@ import java.math.BigDecimal;
 
 public class StockIndex implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
+	private String key;
 	private String name;
+	
 	private BigDecimal value;
 	private long timestamp;
 	
-	public StockIndex(String name, BigDecimal value, long timestamp) {
+	public StockIndex(String key, String name, BigDecimal value, long timestamp) {
+		this.key = key;
 		this.name = name;
 		this.value = value;
 		this.timestamp = timestamp;
 	}
-	String getName() {
+	public StockIndex(String key, String name, String value, long timestamp) {
+		this(key, name, new BigDecimal(value), timestamp);
+	}
+	public String getKey() {
+		return key;
+	}
+	public String getName() {
 		return name;
 	}
-	BigDecimal getValue() {
+	public BigDecimal getValue() {
 		return value;
 	}
-	long getTimestamp() {
+	public long getTimestamp() {
 		return timestamp;
 	}
 	
 	public String toString() {
-		return "StockIndex[name="+name+",value="+value+",timestamp="+timestamp+"]";
+		return "StockIndex[name="+key+",value="+value+",timestamp="+timestamp+"]";
 	}
 }

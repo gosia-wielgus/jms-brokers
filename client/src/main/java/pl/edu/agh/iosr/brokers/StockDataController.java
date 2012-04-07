@@ -13,7 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MainController implements Controller {
+public class StockDataController implements Controller {
 	StockIndexDao dao;
 	public void setDao(StockIndexDao dao) {
 		this.dao = dao;
@@ -23,9 +23,9 @@ public class MainController implements Controller {
             throws ServletException, IOException {
     	
     	Set<StockIndex> index = dao.getAllLatest();
-    	Map<String, Object> model = new HashMap<String, Object>();
-    	model.put("currentIndices", index);
-        return new ModelAndView("index", "model", model);
+    	response.addHeader("Content-Type", "text/plain");
+    	//response.getOutputStream();
+    	return null;
     }
 
 }

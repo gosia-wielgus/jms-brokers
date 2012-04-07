@@ -1,9 +1,11 @@
 package pl.edu.agh.iosr.brokers;
 
+import java.util.Set;
+
 public interface StockIndexDao {
 
-	public abstract void saveStockIndex(StockIndex index);
-
-	public abstract StockIndex getLatest();
+	public void saveStockIndex(StockIndex index);
+	public StockIndex getLatest(String name);
+	public Set<StockIndex> getAllLatest();
 
 }

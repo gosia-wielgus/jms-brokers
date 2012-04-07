@@ -1,5 +1,7 @@
 package pl.edu.agh.iosr.brokers;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import javax.jms.*;
@@ -20,6 +22,10 @@ public class App
         BrokerService broker = new BrokerService();
 
         String url = "tcp://localhost:61616";
+        
+        List<StockIndex> indices = new ArrayList<StockIndex>();
+        indices.add(new StockIndex("pl.wig", "WIG", "10000", 0));
+        indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", 0));
 	     // configure the broker
 	    broker.addConnector(url);
 
@@ -29,7 +35,7 @@ public class App
 	    publisher.start();
 	    
 	    System.out.println("Hello!");
-	    SampleStockIndexProvider provider = new SampleStockIndexProvider(1000);
+	    SampleStockIndexProvider provider = new SampleStockIndexProvider(1000, indices);
 	    provider.setOnStockIndex(new StockIndexListener() {
 			
 			@Override
