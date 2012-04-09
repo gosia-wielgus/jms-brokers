@@ -8,18 +8,20 @@ public class StockIndex implements Serializable {
 
 	private String key;
 	private String name;
-	
+
 	private BigDecimal value;
+	private BigDecimal change;
 	private long timestamp;
 	
-	public StockIndex(String key, String name, BigDecimal value, long timestamp) {
+	public StockIndex(String key, String name, BigDecimal value, BigDecimal change, long timestamp) {
 		this.key = key;
 		this.name = name;
 		this.value = value;
+		this.change = change;
 		this.timestamp = timestamp;
 	}
-	public StockIndex(String key, String name, String value, long timestamp) {
-		this(key, name, new BigDecimal(value), timestamp);
+	public StockIndex(String key, String name, String value, String change, long timestamp) {
+		this(key, name, new BigDecimal(value), new BigDecimal(change), timestamp);
 	}
 	public String getKey() {
 		return key;
@@ -29,6 +31,9 @@ public class StockIndex implements Serializable {
 	}
 	public BigDecimal getValue() {
 		return value;
+	}
+	public BigDecimal getChange() {
+		return change;
 	}
 	public long getTimestamp() {
 		return timestamp;

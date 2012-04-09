@@ -22,6 +22,10 @@
         class="pl.edu.agh.iosr.brokers.LoginController">
         <property name="dao" ref="dao"></property>
     </bean>
+    <bean id="stockdatacontroller" name="/data.json"
+        class="pl.edu.agh.iosr.brokers.StockDataController">
+        <property name="dao" ref="dao"></property>
+    </bean>
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass"

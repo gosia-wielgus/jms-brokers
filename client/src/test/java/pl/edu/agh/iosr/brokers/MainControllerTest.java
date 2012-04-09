@@ -27,7 +27,7 @@ public class MainControllerTest {
 	
 	@Test
 	public void testModelContainsStockIndex() throws Exception {
-		StockIndex index = new StockIndex("abc", "A B C", "123", 1234);
+		StockIndex index = new StockIndex("abc", "A B C", "123", "0", 1234);
 		Set<StockIndex> indices = Collections.singleton(index);
 		when(dao.getAllLatest()).thenReturn(indices);
 		

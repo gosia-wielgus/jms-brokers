@@ -24,8 +24,8 @@ public class App
         String url = "tcp://localhost:61616";
         
         List<StockIndex> indices = new ArrayList<StockIndex>();
-        indices.add(new StockIndex("pl.wig", "WIG", "10000", 0));
-        indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", 0));
+        indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));
+        indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", "0", 0));
 	     // configure the broker
 	    broker.addConnector(url);
 

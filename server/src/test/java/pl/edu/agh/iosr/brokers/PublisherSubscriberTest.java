@@ -15,7 +15,7 @@ public class PublisherSubscriberTest {
 		publisher.start();
 		subscriber.start();
 		
-		StockIndex index = new StockIndex("a", "A", "125", 123);
+		StockIndex index = new StockIndex("a", "A", "125", "-0.5", 123);
 		publisher.send(index);
 		StockIndex received = subscriber.receive();
 

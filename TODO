@@ -1,0 +1,8 @@
+ 
+Essential requirements:
+ - real stock data
+ - two intermediate ActiveMQ instances
+    - with mutual authentication
+ - web user database (?)
+ - stock indices database
+

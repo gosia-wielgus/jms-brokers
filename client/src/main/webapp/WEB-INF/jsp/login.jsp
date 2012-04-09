@@ -7,12 +7,12 @@
  
   <body>
     <h1>Login</h1>
- 
+    Don't know what to write in the fields? Try "user" and "password".
     <c:if test="${not empty param.login_error}">
-      <font color="red">
-        Your login attempt was not successful, try again.<br/><br/>
+      <div>
+        Your login attempt was not successful, try writing "user" and "password".<br/><br/>
         Reason: <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>.
-      </font>
+      </div>
     </c:if>
  
     <form name="f" action="<c:url value='j_spring_security_check'/>" method="POST">

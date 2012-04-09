@@ -1,0 +1,14 @@
+.stock-value, .stock-change {
+	font-family: sans-serif;
+	text-align: right;
+}
+.stock-change-positive {
+    color:#0a0;
+}
+.stock-change-negative {
+    color:#a00;
+}
+
+.stock-change-zero {
+    color:#080;
+}

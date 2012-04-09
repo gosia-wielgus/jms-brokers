@@ -45,6 +45,7 @@ public class SampleStockIndexProvider extends AbstractStockIndexProvider {
 		BigDecimal value = index.getValue().add(change);
 		value = value.abs();
 		value = value.round(new MathContext(8));
-		return new StockIndex(index.getKey(), index.getName(), value, new Date().getTime());
+		change = value.subtract(index.getValue()).add(index.getChange());
+		return new StockIndex(index.getKey(), index.getName(), value, change, new Date().getTime());
 	}
 }

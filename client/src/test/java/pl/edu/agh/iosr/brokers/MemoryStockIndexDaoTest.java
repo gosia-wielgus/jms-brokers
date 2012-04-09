@@ -22,9 +22,9 @@ public class MemoryStockIndexDaoTest {
 	
 	@Test
 	public void testLatest() {
-		StockIndex older = new StockIndex("pl.wig20", "WIG 20", "123", 5);
-		StockIndex newer = new StockIndex("pl.wig20", "WIG 20", "124", 7);
-		StockIndex other = new StockIndex("pl.wig", "WIG", "125", 7);
+		StockIndex older = new StockIndex("pl.wig20", "WIG 20", "123", "0", 5);
+		StockIndex newer = new StockIndex("pl.wig20", "WIG 20", "124", "0", 7);
+		StockIndex other = new StockIndex("pl.wig", "WIG", "125", "0", 7);
 
 		Set<StockIndex> latestSet = new HashSet<StockIndex>();
 		latestSet.add(newer);

@@ -34,6 +34,7 @@
   <servlet-mapping>
     <servlet-name>brokers-client</servlet-name>
     <url-pattern>*.htm</url-pattern>
+    <url-pattern>*.json</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>

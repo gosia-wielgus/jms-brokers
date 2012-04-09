@@ -22,8 +22,8 @@ public class SampleStockIndexProviderTest {
 	
 	@Before
 	public void setUp() {
-		indices.add(new StockIndex("pl.wig", "WIG", "10000", 0));
-		indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", 0));
+		indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));
+		indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", "0", 0));
 		provider = new SampleStockIndexProvider(INTERVAL, indices);
 	}
 	

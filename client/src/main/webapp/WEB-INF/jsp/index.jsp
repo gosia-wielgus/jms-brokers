@@ -1,10 +1,17 @@
 <%@ include file="/WEB-INF/jsp/include.jsp" %>
+<!DOCTYPE html>
 <html>
-  <head><title>Example :: Spring Application</title></head>
+  <head>
+    <title>Advanced Stock Monitoring</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-color.js"></script>
+    <script type="text/javascript" src="js/stocks.js"></script>
+  </head>
   <body>
-    <h1>Example - Spring Application</h1>
-    <table>
-    <tr><th>Index name</th><th>Index value</th><th>Timestamp</th></tr>
+    <h1>Advanced Stock Monitoring</h1>
+    <table class="stock-index-table">
+    <tr><th>Index name</th><th>Index value</th><th>Change</th><th>Percent</th></tr>
     <c:forEach items="${model.currentIndices}" var="index">
       <tr>
         <td>
@@ -13,11 +20,11 @@
         <td>
         <c:out value="${index.value}"/>
         </td>
-        <td>   
-        <c:set var="time" value="${index.timestamp}" />
-        <%
-            out.print(new java.util.Date((Long)pageContext.findAttribute("time")));
-        %>
+        <td>
+        <c:out value="${index.change}"/>
+        </td>
+        <td>
+        <c:out value="${index.change/index.value*100}"/>%
         </td>
      </tr>
     </c:forEach>
