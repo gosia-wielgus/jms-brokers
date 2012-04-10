@@ -25,7 +25,7 @@ public class App
         
         List<StockIndex> indices = new ArrayList<StockIndex>();
         indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));
-        indices.add(new StockIndex("pl.wig20", "WIG 20", "1000", "0", 0));
+        indices.add(new StockIndex("pl.wig20", "WIG20", "1000", "0", 0));
 	     // configure the broker
 	    broker.addConnector(url);
 
@@ -35,7 +35,7 @@ public class App
 	    publisher.start();
 	    
 	    System.out.println("Hello!");
-	    SampleStockIndexProvider provider = new SampleStockIndexProvider(1000, indices);
+	    BankierStockIndexProvider provider = new BankierStockIndexProvider(1000, indices);
 	    provider.setOnStockIndex(new StockIndexListener() {
 			
 			@Override
