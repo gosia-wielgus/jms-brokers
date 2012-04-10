@@ -66,6 +66,6 @@ public class StockIndex implements Serializable {
 	}
 	
 	public String toString() {
-		return "StockIndex[name="+key+",value="+value+",timestamp="+timestamp+"]";
+		return "StockIndex[name="+key+",value="+value+",change="+change+",timestamp="+timestamp+"]";
 	}
 }

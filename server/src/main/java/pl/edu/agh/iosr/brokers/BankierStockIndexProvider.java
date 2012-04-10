@@ -55,8 +55,9 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 			doc = Jsoup.connect(BANKIER_URL).get();
 			String updateKey = "Aktualizacja:";
 			Date date = longFormatter.parse(doc.getElementsContainingOwnText(updateKey).text().replace(updateKey, "").trim());
+			
 			//if(date.after(lastDate)){
-				System.out.println(date);
+				//System.out.println(date);
 				lastDate = date;
 				dispatchAll();
 			//}
@@ -71,6 +72,7 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 		for (int i=0; i<indices.size(); i++) {
 			StockIndex index = indices.get(i);
 			index = updateStockIndex(index);
+			logger.info("Dispatched "+index);
 			dispatch(index);
 			indices.set(i, index);
 		}
@@ -81,10 +83,12 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 		if (rows.size() != 1)
 			throw new ParseException("Could not find index " + index.getName(), 0);
 		Element row = rows.get(0);
+		System.out.println(row);
+		boolean loss = "quoteDown".equals(row.child(1).attr("class"));
 		BigDecimal value = new BigDecimal(row.child(1).text());
-		BigDecimal change = value.subtract(index.getValue()).add(index.getChange());
-		
-		
+		BigDecimal change = new BigDecimal(row.child(2).text());
+		if (loss)
+			change = change.multiply(new BigDecimal("-1"));
 		Date date = shortFormatter.parse(row.child(7).text());	
 		return new StockIndex(index.getKey(), index.getName(), value, change, date.getTime());
 	}
