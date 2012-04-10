@@ -48,10 +48,15 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 	
 	private void checkForUpdates() {
 		try {
+			System.getProperties().put( "proxySet", "true" );
+			System.getProperties().put( "proxyHost", "wwwgate0.mot.com");
+			System.getProperties().put( "proxyPort", "1080");
+			
 			doc = Jsoup.connect(BANKIER_URL).get();
 			String updateKey = "Aktualizacja:";
 			Date date = longFormatter.parse(doc.getElementsContainingOwnText(updateKey).text().replace(updateKey, "").trim());
 			//if(date.after(lastDate)){
+				System.out.println(date);
 				lastDate = date;
 				dispatchAll();
 			//}

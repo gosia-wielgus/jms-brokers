@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="pl.edu.agh.iosr.brokers.StockIndex" table="index">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="key" type="string">
+			<column name="key" length="50" />
+		</property>
+		<property name="name" type="string">
+			<column name="name" length="50" />
+		</property>
+		<property name="value" type="java.math.BigDecimal">
+			<column name="value" />
+		</property>
+		<property name="change" type="java.math.BigDecimal">
+			<column name="change" />
+		</property>
+		<property name="timestamp" type="long">
+			<column name="timestamp" />
+		</property>
+	</class>
+</hibernate-mapping>
