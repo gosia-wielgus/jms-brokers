@@ -1,0 +1,4 @@
+#!/bin/sh
+cd client
+mvn org.mortbay.jetty:maven-jetty-plugin:run
+
