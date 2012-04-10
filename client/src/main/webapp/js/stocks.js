@@ -34,7 +34,7 @@ $.getJSON('data.json', function(data) {
 	  else
 		  change_class = 'stock-change-zero'
     items.push('<tr>'+
-    		'<td>'+val.name+'</td>'+
+    		'<td class="stock-name">'+val.name+'</td>'+
     		'<td class="stock-value">'+val.value+'</td>'+
     		'<td class="'+change_class+' stock-change">'+getAbsoluteChange(val.change)+'</td>'+
     		'<td class="'+change_class+' stock-change">'+getPercentChange(val.value, val.change)+'</td>'+

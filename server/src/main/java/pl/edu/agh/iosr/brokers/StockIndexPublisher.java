@@ -64,7 +64,6 @@ public class StockIndexPublisher {
 		
         ObjectMessage message = (ObjectMessage) session.createObjectMessage(index);
 
-        System.out.println("Sent message: "+ message.hashCode() + " : " + Thread.currentThread().getName());
         producer.send(message);
 	}
 }

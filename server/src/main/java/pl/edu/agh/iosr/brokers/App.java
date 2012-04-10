@@ -34,8 +34,7 @@ public class App
 	    final StockIndexPublisher publisher = new StockIndexPublisher(url);
 	    publisher.start();
 	    
-	    System.out.println("Hello!");
-	    BankierStockIndexProvider provider = new BankierStockIndexProvider(1000, indices);
+	    BankierStockIndexProvider provider = new BankierStockIndexProvider(30000, indices);
 	    provider.setOnStockIndex(new StockIndexListener() {
 			
 			@Override

@@ -25,7 +25,7 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 
 	private Document doc;
 
-	private SimpleDateFormat longFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");;
+	private SimpleDateFormat longFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	private SimpleDateFormat shortFormatter = new SimpleDateFormat("MM-dd\u00a0HH:mm");
 	
 	

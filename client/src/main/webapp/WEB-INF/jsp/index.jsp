@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/stocks.js"></script>
   </head>
   <body>
+    <div class="logout-link"><a href="logout.htm">Log out</a></div>
     <h1>Advanced Stock Monitoring</h1>
     <table class="stock-index-table">
     <tr><th>Index name</th><th>Index value</th><th>Change</th><th>Percent</th></tr>
