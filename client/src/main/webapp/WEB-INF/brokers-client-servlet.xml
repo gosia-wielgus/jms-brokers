@@ -38,9 +38,6 @@
 	<bean id="dao" class="pl.edu.agh.iosr.brokers.StockIndexDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
-	<bean id="cntcfg" class="pl.edu.agh.iosr.brokers.ContainerConfig"
-		autowire="byType">
-	</bean>
 	<bean id="listener" class="pl.edu.agh.iosr.brokers.JMSStockIndexListener">
 		<property name="dao" ref="dao"></property>
 	</bean>
@@ -48,7 +45,4 @@
 	<bean id="destination" class="org.apache.activemq.command.ActiveMQTopic">
 		<constructor-arg value="brokers.pl.wig20,brokers.pl.wig" />
 	</bean>
-	<!-- <jms:listener-container connection-factory="connectionFactory" destination-type="topic"> 
-		<jms:listener destination="TEST.FOO" ref="listener" /> <jms:listener destination="TEST2.FOO" 
-		ref="listener" /> </jms:listener-container> -->
 </beans>

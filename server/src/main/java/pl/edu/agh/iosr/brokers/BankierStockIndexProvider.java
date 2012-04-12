@@ -83,7 +83,6 @@ public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 		if (rows.size() != 1)
 			throw new ParseException("Could not find index " + index.getName(), 0);
 		Element row = rows.get(0);
-		System.out.println(row);
 		boolean loss = "quoteDown".equals(row.child(1).attr("class"));
 		BigDecimal value = new BigDecimal(row.child(1).text());
 		BigDecimal change = new BigDecimal(row.child(2).text());
