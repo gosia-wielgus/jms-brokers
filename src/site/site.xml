@@ -3,6 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
 	<body>
+		<menu name="Main Project" inherit="top">
+			<item name="Java JMS Stock Brokers" href="${project.url}" />
+		</menu>
 		<menu name="Project Specification">
 			<item name="Use Cases" href="use-cases.html" />
 			<item name="Requirements" href="requirements.html" />
@@ -13,6 +16,7 @@
 		</menu>
 		<menu name="Team Meetings">
 		</menu>
-		<menu ref="reports" />
+		<menu ref="modules" />
+		<menu ref="reports" inherit="bottom" />
 	</body>
 </project>

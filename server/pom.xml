@@ -85,7 +85,7 @@
 	<distributionManagement>
 		<site>
 			<id>gh-pages</id>
-			<url>file:${project.basedir}/../site/${project.artifactId}</url>
+			<url>file:${project.basedir}/../site/${project.artifactId}/</url>
 		</site>
 	</distributionManagement>
 </project>
