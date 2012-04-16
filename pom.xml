@@ -16,12 +16,12 @@
 			<roles>
 				<role>Team Leader</role>
 			</roles>
-		</developer>         
+		</developer>
 		<developer>
 			<id>gosia-wielgus</id>
 			<name>Małgorzata Wielgus</name>
 			<email>malgorza@srudent.agh.edu.pl</email>
-		</developer>         
+		</developer>
 	</developers>
 	<modules>
 		<module>server</module>
@@ -82,15 +82,10 @@
 							<report>issue</report>
 							<report>project-team</report>
 							<report>scm</report>
-							<report>dependencies</report>
-							<report>summary</report>
-<!--						 in case we ever want it
-							<report>dependencies</report>
-							<report>dependency-management</report>
 							<report>dependency-convergence</report>
-							<report>distribution-management</report>
-							<report>plugins</report>
-							<report>plugin-management</report>  -->
+							<report>summary</report>
+							<!-- in case we ever want it <report>dependencies</report> <report>dependency-management</report> 
+								<report>distribution-management</report> <report>plugins</report> <report>plugin-management</report> -->
 						</reports>
 					</reportSet>
 				</reportSets>
@@ -98,49 +93,18 @@
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
 			</plugin>
-			<!-- one day we will turn it on
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jxr-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-clover-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>changelog-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>taglist-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jxr-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-clover-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>changelog-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>taglist-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-			</plugin> -->
+			<!-- one day we will turn it on <plugin> <groupId>org.codehaus.mojo</groupId> 
+				<artifactId>jxr-maven-plugin</artifactId> </plugin> <plugin> <artifactId>maven-surefire-plugin</artifactId> 
+				</plugin> <plugin> <artifactId>maven-clover-plugin</artifactId> </plugin> 
+				<plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>changelog-maven-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>taglist-maven-plugin</artifactId> 
+				</plugin> <plugin> <artifactId>maven-checkstyle-plugin</artifactId> </plugin> 
+				<plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>jxr-maven-plugin</artifactId> 
+				</plugin> <plugin> <artifactId>maven-surefire-plugin</artifactId> </plugin> 
+				<plugin> <artifactId>maven-clover-plugin</artifactId> </plugin> <plugin> 
+				<groupId>org.codehaus.mojo</groupId> <artifactId>changelog-maven-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>taglist-maven-plugin</artifactId> 
+				</plugin> <plugin> <artifactId>maven-checkstyle-plugin</artifactId> </plugin> -->
 		</plugins>
 	</reporting>
 </project>

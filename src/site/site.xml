@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/DECORATION/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
-    <body>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+	<body>
 		<menu name="Project Specification">
 			<item name="Use Cases" href="use-cases.html" />
 			<item name="Requirements" href="requirements.html" />
 			<item name="Architecture" href="architecture.html">
-			  <item name="Stock Indices Server" href="server-architecture.html" />
-			  <item name="Spring MVC Client" href="client-architecture.html" />
+				<item name="Stock Indices Server" href="server-architecture.html" />
+				<item name="Spring MVC Client" href="client-architecture.html" />
 			</item>
-		</menu>		
+		</menu>
 		<menu name="Team Meetings">
 		</menu>
-        <menu ref="reports" />
-    </body>
+		<menu ref="reports" />
+	</body>
 </project>
