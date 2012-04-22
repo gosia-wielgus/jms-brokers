@@ -8,5 +8,63 @@
 
 Java JMS Stock Brokers use cases
 
-[../resouces/img/use-cases.png] Diagram
+[images/use-cases.png] Use case diagram
 
+Use case details
+
+* Log in
+
+    [Identifier] Log in
+    
+    [Preconditions] User is not logged in
+    
+    [Actor] Web application user
+    
+    [Main Success scenario] 
+    
+        [[1]] User is presented the login form
+        
+        [[2]] User enters their username and password
+        
+        [[3]] User may decide to use "Remember me" option, which causes the user to remain logged after closing the browser window
+        
+        [[4]] System logs user in for the current session
+    
+    [Extensions]
+        3a. The username/password pair is not recognized
+        
+          [[1]] System notifies the user that their login attempt failed because of wrong credentials
+          
+          [[2]] System presents the login form for another login attempt
+    
+* Log out
+
+    [Identifier] Log out
+    
+    [Preconditions] User is logged in
+    
+    [Actor] Web application user
+    
+    [Main Success scenario] 
+        
+        [[1]] User clicks "log out" link which is present on every page
+        
+        [[2]] User is logged out and redirected to the login page
+
+    [Extensions] N/A
+
+* View real-time stock indices
+
+    [Identifier] View real-time stock indices
+    
+    [Preconditions] User is logged in
+    
+    [Actor] Web application user
+    
+    [Main Success scenario] 
+        
+        [[1]] User which is logged in should be able to see names, prices, changes in prices (absolute and precent) of all stock indices tracked by the system.
+        
+        [[2]] Stock index price data should change to current values continously, without the need to refresh the page.
+
+    [Extensions] N/A

@@ -1,0 +1,34 @@
+        ---
+        Product requirements
+        ---
+        Adam Chrabąszcz
+        ---
+        16-Apr-2012
+        ---
+        
+Functional requirements
+
+Non-functional requirements
+
+* Minimisation number of queries on stock data provider
+
+    [Descripion]
+        Queries about the real-time state of indices shall be made only from one central location.
+    [Rationale]
+        Making queries from only one central point eases configuration and maintenance of connections to external stock data providers.
+        Limiting number of queries reduces load on external services, which can be limited by contract with stock data provider.
+    
+* Client interaction as a web application
+
+    [Descripion]
+        End users shall communicate with the system via web interface
+    [Rationale]
+        Web interfaces do not requiere to be installed on end user machines, which improves maintainability.
+    
+* Client web application must be compatible with modern browsers
+
+    [Descripion]
+        Client application shall rremain functionally equivalent under Firefox 4+, MSIE 9+. Chrome 12+.
+    [Rationale]
+        ...
+    
