@@ -14,6 +14,7 @@ Non-functional requirements
 
     [Descripion]
         Queries about the real-time state of indices shall be made only from one central location.
+
     [Rationale]
         Making queries from only one central point eases configuration and maintenance of connections to external stock data providers.
         Limiting number of queries reduces load on external services, which can be limited by contract with stock data provider.
@@ -22,6 +23,7 @@ Non-functional requirements
 
     [Descripion]
         End users shall communicate with the system via web interface
+
     [Rationale]
         Web interfaces do not requiere to be installed on end user machines, which improves maintainability.
     
@@ -29,6 +31,22 @@ Non-functional requirements
 
     [Descripion]
         Client application shall rremain functionally equivalent under Firefox 4+, MSIE 9+. Chrome 12+.
+
     [Rationale]
-        ...
-    
+        Type of the browser installed on end users' computers is uncertain, and hard to change. Increasing interoperability is appreciated, but providing compatibility for old browsers (like MSIE 6) may pose a prohibitive cost. Basing the interoperability on web standards is the middle ground.
+
+* Client application must not require browser plugins
+
+    [Descripion]
+        Operation of the web application shall not require user to install any additional software to view it.
+
+    [Rationale]
+        Softawre installations may be impossible on end-user machines.
+
+* Require mutual authentication of client and server
+
+    [Descripion]
+        Central stock data dispensing server shall be authenticated to and authenticate all clients connecting to it.
+
+    [Rationale]
+        As the communication is conducted between separate organisations over the public internet, there needs to be a mechanism preventing the modification or viewing private communication by unauthorized third parties.
