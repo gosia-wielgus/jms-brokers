@@ -7,8 +7,8 @@
 			<item name="Java JMS Stock Brokers" href="${project.url}" />
 		</menu>
 		<menu name="Project Specification">
+                        <item name="Requirements" href="requirements.html" />
 			<item name="Use Cases" href="use-cases.html" />
-			<item name="Requirements" href="requirements.html" />
 			<item name="Architecture" href="architecture.html">
 				<item name="Stock Indices Server" href="server-architecture.html" />
 				<item name="Spring MVC Client" href="client-architecture.html" />

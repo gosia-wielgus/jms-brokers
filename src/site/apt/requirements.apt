@@ -8,8 +8,43 @@
         
 Functional requirements
 
+    More specifics in {{{./use-cases.html}Use Case description}}.
+
+    * Users should log in before being able to view the stock indices. User data is stored in web application's database. 
+
+    * Users should be able to see stock index data changing in real-time.
+
+
+Wymagania funkcjonalne
+----------------------
+
+ - Logowanie do serwisu.
+   Każda z aplikacji www posiada loginy/hasła użytkowników, którzy mogą z niej korzystać. Dane te są wymagane do zalogowania do systemu.
+ - Wyświetlanie wskaźników giełdowych.
+   Użytkownik powinien móc obserwować kursy akcji/wskaźników giełdowych w czasie rzeczywistym.
+ - Komunikacja z zewnętrznym źródłem danych ma odbywać się z jednego, centralnego serwera.
+ - Dołączanie i odłączanie aplikacji www do serwera głównego nie powinno skutkować przerwaniem działania innych aplikacji.
+
+Wymagania niefunkcjonalne
+-------------------------
+
+ - Użytkownicy łączą się z systemem za pośrednictwem aplikacji webowej.
+ - Aplikacja webowa ma działać na wszystkich aktulanych przeglądarkach (Firefox, MSIE 9, Chrome).
+ - Aplikacja www nie może wymagać żadnego dodatkowego oprogramowania poza przeglądarką internetową.
+ - Komunikacja serwera głównego z aplikacjami klienckimi powinna być autentyfikowana.
+
+
+
 Non-functional requirements
 
+* Separation of main server and web application
+
+    [Descripion]
+        Main server collecting server data should be separated from client web application instances, potentially being run by different organisations.
+
+    [Rationale]
+        The idea of stock index data distribution depends on the observation that it is easier to gather stock data in one place and distribute it to recipients. The recipients do not have to be concerned with the actual methods by which stock data is retrieved by the central server.
+    
 * Minimisation number of queries on stock data provider
 
     [Descripion]
