@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.5316455696202531" branch-rate="0.5" lines-covered="42" lines-valid="79" branches-covered="5" branches-valid="10" complexity="1.5357142857142858" version="1.9.4.1" timestamp="1335310282611">
+	<sources>
+		<source>/home/admchr/agh/jms-brokers/client/src/main/java</source>
+		<source>--source</source>
+	</sources>
+	<packages>
+		<package name="pl.edu.agh.iosr.brokers" line-rate="0.5316455696202531" branch-rate="0.5" complexity="1.5357142857142858">
+			<classes>
+				<class name="pl.edu.agh.iosr.brokers.JMSStockIndexListener" filename="pl/edu/agh/iosr/brokers/JMSStockIndexListener.java" line-rate="0.7777777777777778" branch-rate="1.0" complexity="2.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="onMessage" signature="(Ljavax/jms/Message;)V" line-rate="0.6666666666666666" branch-rate="1.0">
+							<lines>
+								<line number="14" hits="4" branch="false"/>
+								<line number="16" hits="4" branch="false"/>
+								<line number="17" hits="4" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="21" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="24" hits="4" branch="false"/>
+								<line number="25" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="4" branch="false"/>
+						<line number="14" hits="4" branch="false"/>
+						<line number="16" hits="4" branch="false"/>
+						<line number="17" hits="4" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="21" hits="4" branch="false"/>
+						<line number="24" hits="4" branch="false"/>
+						<line number="25" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.LoginController" filename="pl/edu/agh/iosr/brokers/LoginController.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="showLoginForm" signature="()Lorg/springframework/web/servlet/ModelAndView;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.MainController" filename="pl/edu/agh/iosr/brokers/MainController.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="16" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="handleRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/springframework/web/servlet/ModelAndView;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="25" hits="6" branch="false"/>
+								<line number="26" hits="6" branch="false"/>
+								<line number="27" hits="6" branch="false"/>
+								<line number="28" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="6" branch="false"/>
+								<line number="20" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="16" hits="6" branch="false"/>
+						<line number="19" hits="6" branch="false"/>
+						<line number="20" hits="6" branch="false"/>
+						<line number="25" hits="6" branch="false"/>
+						<line number="26" hits="6" branch="false"/>
+						<line number="27" hits="6" branch="false"/>
+						<line number="28" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.MemoryStockIndexDao" filename="pl/edu/agh/iosr/brokers/MemoryStockIndexDao.java" line-rate="1.0" branch-rate="0.75" complexity="2.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="8" hits="24" branch="false"/>
+								<line number="9" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllLatest" signature="()Ljava/util/Set;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="25" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLatest" signature="(Ljava/lang/String;)Lpl/edu/agh/iosr/brokers/StockIndex;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="saveStockIndex" signature="(Lpl/edu/agh/iosr/brokers/StockIndex;)V" line-rate="1.0" branch-rate="0.75">
+							<lines>
+								<line number="11" hits="18" branch="false"/>
+								<line number="12" hits="18" branch="true" condition-coverage="75% (3/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="13" hits="6" branch="false"/>
+								<line number="15" hits="12" branch="false"/>
+								<line number="16" hits="12" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="24" branch="false"/>
+						<line number="9" hits="12" branch="false"/>
+						<line number="11" hits="18" branch="false"/>
+						<line number="12" hits="18" branch="true" condition-coverage="75% (3/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="13" hits="6" branch="false"/>
+						<line number="15" hits="12" branch="false"/>
+						<line number="16" hits="12" branch="false"/>
+						<line number="20" hits="12" branch="false"/>
+						<line number="25" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.StockDataController" filename="pl/edu/agh/iosr/brokers/StockDataController.java" line-rate="0.8260869565217391" branch-rate="1.0" complexity="3.3333333333333335">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="handleRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/springframework/web/servlet/ModelAndView;" line-rate="0.8181818181818182" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="5" branch="false"/>
+								<line number="30" hits="5" branch="false"/>
+								<line number="31" hits="5" branch="false"/>
+								<line number="32" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="33" hits="5" branch="false"/>
+								<line number="36" hits="5" branch="false"/>
+								<line number="37" hits="5" branch="false"/>
+								<line number="38" hits="5" branch="false"/>
+								<line number="39" hits="5" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="serialize" signature="(Lpl/edu/agh/iosr/brokers/StockIndex;)Lorg/json/JSONObject;" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="47" hits="5" branch="false"/>
+								<line number="48" hits="5" branch="false"/>
+								<line number="49" hits="5" branch="false"/>
+								<line number="50" hits="5" branch="false"/>
+								<line number="51" hits="5" branch="false"/>
+								<line number="52" hits="5" branch="false"/>
+								<line number="53" hits="5" branch="false"/>
+								<line number="54" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="23" hits="5" branch="false"/>
+								<line number="24" hits="5" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="5" branch="false"/>
+						<line number="23" hits="5" branch="false"/>
+						<line number="24" hits="5" branch="false"/>
+						<line number="29" hits="5" branch="false"/>
+						<line number="30" hits="5" branch="false"/>
+						<line number="31" hits="5" branch="false"/>
+						<line number="32" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="33" hits="5" branch="false"/>
+						<line number="36" hits="5" branch="false"/>
+						<line number="37" hits="5" branch="false"/>
+						<line number="38" hits="5" branch="false"/>
+						<line number="39" hits="5" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="47" hits="5" branch="false"/>
+						<line number="48" hits="5" branch="false"/>
+						<line number="49" hits="5" branch="false"/>
+						<line number="50" hits="5" branch="false"/>
+						<line number="51" hits="5" branch="false"/>
+						<line number="52" hits="5" branch="false"/>
+						<line number="53" hits="5" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.StockIndexDao" filename="pl/edu/agh/iosr/brokers/StockIndexDao.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.StockIndexDaoImpl" filename="pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java" line-rate="0.0" branch-rate="0.0" complexity="1.2">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAllLatest" signature="()Ljava/util/Set;" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="45" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+								<line number="48" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLatest" signature="(Ljava/lang/String;)Lpl/edu/agh/iosr/brokers/StockIndex;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSessionFactory" signature="()Lorg/hibernate/SessionFactory;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="saveStockIndex" signature="(Lpl/edu/agh/iosr/brokers/StockIndex;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSessionFactory" signature="(Lorg/hibernate/SessionFactory;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="24" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="43" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="45" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="48" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.UserService" filename="pl/edu/agh/iosr/brokers/UserService.java" line-rate="0.0" branch-rate="0.0" complexity="1.25">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadUserByUsername" signature="(Ljava/lang/String;)Lorg/springframework/security/core/userdetails/UserDetails;" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="17" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="pl.edu.agh.iosr.brokers.UserService$1" filename="pl/edu/agh/iosr/brokers/UserService.java" line-rate="0.0" branch-rate="1.0" complexity="1.25">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lpl/edu/agh/iosr/brokers/UserService;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="1" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAuthorities" signature="()Ljava/util/Collection;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="22" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPassword" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="27" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsername" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="32" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="isAccountNonExpired" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="isAccountNonLocked" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="42" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="isCredentialsNonExpired" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="47" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="isEnabled" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="52" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="1" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
