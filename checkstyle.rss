@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>Java JMS Stock Brokers - Checkstyle report</title>
+    <link>http://gosia-wielgus.github.com/jms-brokers</link>
+    <description>Java JMS Stock Brokers - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2012</copyright>
+    <item>
+      <title>File: 17,
+             Errors: 843,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>http://gosia-wielgus.github.com/jms-brokers/checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.JMSStockIndexListener.java">pl/edu/agh/iosr/brokers/JMSStockIndexListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  29
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDao.java">pl/edu/agh/iosr/brokers/StockIndexDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.UserService.java">pl/edu/agh/iosr/brokers/UserService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  49
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.App.java">pl/edu/agh/iosr/brokers/App.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  62
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexPublisher.java">pl/edu/agh/iosr/brokers/StockIndexPublisher.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  67
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDaoImpl.java">pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  49
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.LoginController.java">pl/edu/agh/iosr/brokers/LoginController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.MemoryStockIndexDao.java">pl/edu/agh/iosr/brokers/MemoryStockIndexDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  30
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.SampleStockIndexProvider.java">pl/edu/agh/iosr/brokers/SampleStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexListener.java">pl/edu/agh/iosr/brokers/StockIndexListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.MainController.java">pl/edu/agh/iosr/brokers/MainController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndex.java">pl/edu/agh/iosr/brokers/StockIndex.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  156
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.AbstractStockIndexProvider.java">pl/edu/agh/iosr/brokers/AbstractStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockDataController.java">pl/edu/agh/iosr/brokers/StockDataController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  59
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexProvider.java">pl/edu/agh/iosr/brokers/StockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexSubscriber.java">pl/edu/agh/iosr/brokers/StockIndexSubscriber.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  56
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.BankierStockIndexProvider.java">pl/edu/agh/iosr/brokers/BankierStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  132
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
