@@ -8,6 +8,8 @@
 
 Functional requirements
 
+    More specifics in {{{./use-cases.html}Use Case description}}.
+
 * Server application
 
     [Detailed specification]
@@ -66,7 +68,15 @@ Functional requirements
 
 Non-functional requirements
 
-* Minimization number of queries on stock data provider
+* Separation of main server and web application
+
+    [Descripion]
+        Main server collecting server data should be separated from client web application instances, potentially being run by different organisations.
+
+    [Rationale]
+        The idea of stock index data distribution depends on the observation that it is easier to gather stock data in one place and distribute it to recipients. The recipients do not have to be concerned with the actual methods by which stock data is retrieved by the central server.
+    
+* Minimisation number of queries on stock data provider
 
     [Description]
         Queries about the real-time state of indices shall be made only from one central location.
