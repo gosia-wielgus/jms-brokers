@@ -1,37 +1,43 @@
-	---
-	Architecture overview
-	---
-	Małgorzata Wielgus
-	---
-	16-Apr-2012
-	---
+    ---
+    Architecture overview
+    ---
+    Małgorzata Wielgus
+    ---
+    16-Apr-2012
+    ---
 
 Java JMS Stock Brokers architecture overview
 
 [images/DFD.png] Data Flow Diagram
 
-Architecture basics
+* Architecture basics
 
-	* server downloads live stock indices data from external provider, process them and produces JMS messages
+    [Data Flow]
 
-	* each stock index has own topic
+    * server downloads live stock indices data from external provider, process them and produces JMS messages
 
-	* client can subscribe one or more topics
+    * each stock index has own topic
 
-	* each client has own intermediate broker instance
+    * client can subscribe one or more topics
 
-	* brokers form distributed store-and-forward network of brokers
+    * each client has own intermediate broker instance
 
-	* clients present stock data to user via web based interface 
+    * brokers form distributed store-and-forward network of brokers
 
-	* non-homogeneous client support 
+    * clients present stock data to user via web based interface 
 
-	* clients store historical data
+    [Other]
 
-Technnical details
+    * non-homogeneous client support 
 
-	* ActiveMQ as JMS implementation
+    * clients store historical data
 
-	* brokers use SSL mutual autentication
+* Technnical details
 
-	* example client implemention using Spring MVC and Spring Security
+    [Technologies]
+
+    * ActiveMQ as JMS implementation
+
+    * brokers use SSL mutual authentication
+
+    * example client implementation using Spring MVC and Spring Security

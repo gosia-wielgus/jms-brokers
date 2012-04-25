@@ -1,10 +1,10 @@
-	---
-	Use cases
-	---
-	Małgorzata Wielgus
-	---
-	16-Apr-2012
-	---
+    ---
+    Use cases
+    ---
+    Małgorzata Wielgus
+    ---
+    16-Apr-2012
+    ---
 
 Java JMS Stock Brokers use cases
 
@@ -22,20 +22,20 @@ Use case details
     
     [Main Success scenario] 
     
-        [[1]] User is presented the login form
+        [[1]] User is presented the login form.
         
-        [[2]] User enters their username and password
+        [[2]] User enters their username and password.
         
-        [[3]] User may decide to use "Remember me" option, which causes the user to remain logged after closing the browser window
+        [[3]] User may decide to use "Remember me" option, which causes the user to remain logged after closing the browser window.
         
-        [[4]] System logs user in for the current session
+        [[4]] System logs user in for the current session.
     
     [Extensions]
-        3a. The username/password pair is not recognized
-        
-          [[1]] System notifies the user that their login attempt failed because of wrong credentials
-          
-          [[2]] System presents the login form for another login attempt
+        3a. The username/password pair is not recognized.
+
+            [[1]] System notifies the user that their login attempt failed because of wrong credentials.
+
+            [[2]] System presents the login form for another login attempt.
     
 * Log out
 
@@ -47,9 +47,9 @@ Use case details
     
     [Main Success scenario] 
         
-        [[1]] User clicks "log out" link which is present on every page
+        [[1]] User clicks "log out" link which is present on every page.
         
-        [[2]] User is logged out and redirected to the login page
+        [[2]] User is logged out and redirected to the login page.
 
     [Extensions] N/A
 
@@ -63,8 +63,51 @@ Use case details
     
     [Main Success scenario] 
         
-        [[1]] User which is logged in should be able to see names, prices, changes in prices (absolute and precent) of all stock indices tracked by the system.
+        [[1]] User which is logged in should be able to see names, prices, changes in prices (absolute and percent) of all stock indices tracked by the system.
         
-        [[2]] Stock index price data should change to current values continously, without the need to refresh the page.
+        [[2]] Stock index price data should change to current values continuously, without the need to refresh the page.
 
     [Extensions] N/A
+
+* Manage stock index providers
+
+    [Identifier] Install new stock index provider
+    
+    [Preconditions] Administrator is logged in as a user with write access to central server properties
+    
+    [Actor] Central server administrator
+    
+    [Main Success scenario] 
+        
+        [[1]] Administrator edits file with server properties. He or she can add, delete and update index providers URLs. For each provider format of a file with index data must be specified.
+
+        [[2]] Administrator restarts the server.
+
+        [[3]] Server restarts and starts collecting indices data from updated providers.
+
+    [Extensions]
+        1a. Administrator wants to upgrade server to newer version that supports new file formats.
+            
+            [[1]] Administrator replaces server application with newer version.
+        2a. File with properties is malformed or one of file formats is not recognized.
+            
+            [[1]] Server prints error message and returns with error.
+
+* Manage stock indices for client to monitor
+
+    [Identifier] Manage stock indices for client to monitor
+    
+    [Preconditions] Administrator is logged in as a user with write access to client application properties
+    
+    [Actor] Client application administrator
+    
+    [Main Success scenario] 
+        
+        [[1]] Administrator edits file with client application properties. He or she can add and delete index names to monitor.
+
+        [[2]] Administrator restarts the client application.
+
+        [[3]] Client application restarts and starts collecting updated indices. An index it will be listed with empty values unless corresponding data will be provided by central server.
+
+    [Extensions] N/A
+    

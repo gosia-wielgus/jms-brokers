@@ -1,18 +1,74 @@
-        ---
-        Product requirements
-        ---
-        Adam Chrabąszcz
-        ---
-        16-Apr-2012
-        ---
-        
+    ---
+    Product requirements
+    ---
+    Adam Chrabąszcz
+    ---
+    16-Apr-2012
+    ---
+
 Functional requirements
+
+* Server application
+
+    [Detailed specification]
+    
+        * Server application should be started from command line on server machine
+
+        * Upon startup it should read a file with properties (indices list, providers definition, port configuration)
+
+        * Upon startup it should configure and start embedded instance of message broker
+
+        * For each stock index one JMS topic should be created
+
+        * Server should retrieve data and send update messages to corresponding topic for defined indices from the providers with given frequency
+
+        * When stopped, server application should stop message broker and close open sockets
+
+* Client application
+
+    [Detailed specification]
+    
+        * Client application should be started from command line on intermediate machine
+        
+        * Upon startup it should read a file with properties (indices list, server URL, certificates)
+
+        * Upon first startup it should create database with web application user credentials and for historical stock index data
+
+        * Upon startup it should start embedded instance of message broker and federate it in store and forward network of brokers with central message broker
+     
+        * Message broker should authenticate itself at central message broker and demand server authentication
+        
+        * If authentication is successful server should create duplex connection
+
+        * Client application should subscribe topics for selected indices
+
+        * Embedded database server should be started
+        
+        * When a message is received its data should e stored in local database
+
+        * When stopped, client application should stop database server and message broker
+
+        * Client application should provide web user interface accessible from remote computer
+
+    [User interface specification]
+
+        * If user is not logged in, login page should be displayed
+
+        * Client application should check entered username existence in database and compare password hashes
+
+        * If credentials are correct user should be redirected to main page, else he should be redirected back to login page
+        
+        * On main page each subscribed index should be displayed along with its last price and change in prices (absolute and percent)
+        
+        * After new update message is received index values should be updated on page asynchronously (without refreshing the page)
+        
+        * If a user selects to log out, he should b logged out and redirected back to login page
 
 Non-functional requirements
 
-* Minimisation number of queries on stock data provider
+* Minimization number of queries on stock data provider
 
-    [Descripion]
+    [Description]
         Queries about the real-time state of indices shall be made only from one central location.
 
     [Rationale]
@@ -21,32 +77,32 @@ Non-functional requirements
     
 * Client interaction as a web application
 
-    [Descripion]
+    [Description]
         End users shall communicate with the system via web interface
 
     [Rationale]
-        Web interfaces do not requiere to be installed on end user machines, which improves maintainability.
+        Web interfaces do not require to be installed on end user machines, which improves maintainability.
     
 * Client web application must be compatible with modern browsers
 
-    [Descripion]
-        Client application shall rremain functionally equivalent under Firefox 4+, MSIE 9+. Chrome 12+.
+    [Description]
+        Client application shall remain functionally equivalent under Firefox 4+, MSIE 9+. Chrome 12+.
 
     [Rationale]
         Type of the browser installed on end users' computers is uncertain, and hard to change. Increasing interoperability is appreciated, but providing compatibility for old browsers (like MSIE 6) may pose a prohibitive cost. Basing the interoperability on web standards is the middle ground.
 
 * Client application must not require browser plugins
 
-    [Descripion]
+    [Description]
         Operation of the web application shall not require user to install any additional software to view it.
 
     [Rationale]
-        Softawre installations may be impossible on end-user machines.
+        Software installations may be impossible on end-user machines.
 
 * Require mutual authentication of client and server
 
-    [Descripion]
+    [Description]
         Central stock data dispensing server shall be authenticated to and authenticate all clients connecting to it.
 
     [Rationale]
-        As the communication is conducted between separate organisations over the public internet, there needs to be a mechanism preventing the modification or viewing private communication by unauthorized third parties.
+        As the communication is conducted between separate organizations over the public Internet, there needs to be a mechanism preventing the modification or viewing private communication by unauthorized third parties.
