@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>StockDataControllerTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/pl/edu/agh/iosr/brokers/StockDataControllerTest.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> pl.edu.agh.iosr.brokers;
+<a class="jxr_linenumber" name="2" href="#2">2</a>   
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.io.OutputStream;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> java.util.Collections;
+<a class="jxr_linenumber" name="5" href="#5">5</a>   
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> javax.servlet.ServletOutputStream;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> javax.servlet.http.HttpServletRequest;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> javax.servlet.http.HttpServletResponse;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> org.hibernate.sql.ordering.antlr.CollationSpecification;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> org.hsqldb.Collation;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.*;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mockito.Mockito.*;
+<a class="jxr_linenumber" name="15" href="#15">15</a>  
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../pl/edu/agh/iosr/brokers/StockDataControllerTest.html">StockDataControllerTest</a> {
+<a class="jxr_linenumber" name="17" href="#17">17</a>  	StockDataController controller;
+<a class="jxr_linenumber" name="18" href="#18">18</a>  	@Test
+<a class="jxr_linenumber" name="19" href="#19">19</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testHandleRequest() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="20" href="#20">20</a>  		StockIndexDao dao = mock(StockIndexDao.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="21" href="#21">21</a>  		HttpServletRequest request = mock(HttpServletRequest.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="22" href="#22">22</a>  		HttpServletResponse response = mock(HttpServletResponse.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="23" href="#23">23</a>  		ServletOutputStream stream = mock(ServletOutputStream.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="24" href="#24">24</a>  		
+<a class="jxr_linenumber" name="25" href="#25">25</a>  		StockIndex stockIndex = <strong class="jxr_keyword">new</strong> StockIndex(<span class="jxr_string">"key1"</span>, <span class="jxr_string">"name1"</span>, <span class="jxr_string">"1234"</span>, <span class="jxr_string">"-125"</span>, 123456);
+<a class="jxr_linenumber" name="26" href="#26">26</a>  		
+<a class="jxr_linenumber" name="27" href="#27">27</a>  		when(dao.getAllLatest()).thenReturn(Collections.singleton(stockIndex));
+<a class="jxr_linenumber" name="28" href="#28">28</a>  		when(response.getOutputStream()).thenReturn(stream);
+<a class="jxr_linenumber" name="29" href="#29">29</a>  		
+<a class="jxr_linenumber" name="30" href="#30">30</a>  		controller = <strong class="jxr_keyword">new</strong> StockDataController();
+<a class="jxr_linenumber" name="31" href="#31">31</a>  		controller.setDao(dao);
+<a class="jxr_linenumber" name="32" href="#32">32</a>  		
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		assertNull(controller.handleRequest(request, response));
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		verify(response).addHeader(<span class="jxr_string">"Content-Type"</span>, <span class="jxr_string">"application/json"</span>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		verify(stream).println(<span class="jxr_string">"{\&quot;stock_indices\&quot;:{\&quot;key1\&quot;:{\&quot;timestamp\&quot;:123456,\&quot;change\&quot;:\&quot;-125\&quot;,\&quot;name\&quot;:\&quot;name1\&quot;,\&quot;value\&quot;:\&quot;1234\&quot;,\&quot;key\&quot;:\&quot;key1\&quot;}}}"</span>);
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>  
+<a class="jxr_linenumber" name="39" href="#39">39</a>  	}
+<a class="jxr_linenumber" name="40" href="#40">40</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+
