@@ -49,3 +49,4 @@ public class StockIndexDaoImpl implements StockIndexDao {
 		return ret;
 	}
 }
+

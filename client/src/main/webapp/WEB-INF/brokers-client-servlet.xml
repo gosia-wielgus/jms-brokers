@@ -52,13 +52,13 @@
 
 	<amq:broker useJmx="false" persistent="false">
 		<amq:networkConnectors>
-			<amq:networkConnector uri="static://(ssl://localhost:61617?needClientAuth=true)" duplex="true"/>
+			<amq:networkConnector
+				uri="static://(ssl://localhost:61616)" duplex="true" />
 		</amq:networkConnectors>
-	    <amq:sslContext>
-	      <amq:sslContext 
-	      		keyStore="server.keystore" keyStorePassword="password"
-	      		trustStore="client.keystore" trustStorePassword="password"/>
-		</amq:sslContext>
+        <amq:sslContext>
+            <amq:sslContext keyStore="client.ks" keyStorePassword="password"
+                trustStore="client.ks" trustStorePassword="password" />
+        </amq:sslContext>
 		<amq:transportConnectors>
 			<amq:transportConnector uri="vm://localhost" />
 		</amq:transportConnectors>

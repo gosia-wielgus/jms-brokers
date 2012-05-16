@@ -30,12 +30,13 @@ public class StockDataController implements Controller {
 	    	Set<StockIndex> indices = dao.getAllLatest();
 	    	response.addHeader("Content-Type", "application/json");
 	    	JSONObject jsonIndices = new JSONObject();
-	    	for (StockIndex index : indices) {
-	    		jsonIndices.put(index.getKey(), serialize(index));
-	    	}
-	    	
+			for (StockIndex index : indices) {
+				jsonIndices.put(index.getKey(), serialize(index));
+			}
+
 	    	JSONObject root = new JSONObject();
 	    	root.put("stock_indices", jsonIndices);
+	    	
 	    	response.getOutputStream().println(root.toString());
 	    	return null;
     	} catch (JSONException e) {

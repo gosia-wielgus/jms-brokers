@@ -1,3 +1,5 @@
 #!/bin/sh
-java -jar server/target/server*dependencies.jar
+
+export SSL_OPTS=""
+java -Djavax.net.ssl.keyStore=server/server.ks -Djavax.net.ssl.trustStore=server/server.ks -Djavax.net.ssl.keyStorePassword=password -jar server/target/server*dependencies.jar
 
