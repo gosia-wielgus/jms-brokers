@@ -7,8 +7,8 @@ import java.util.Set;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Expression;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
@@ -32,7 +32,7 @@ public class StockIndexDaoImpl implements StockIndexDao {
 	@Override
 	public StockIndex getLatest(String name) {
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(StockIndex.class);	
-		return (StockIndex) crit.add(Expression.eq("name", name)).addOrder(Order.desc("date")).setMaxResults(1).list().get(0);
+		return (StockIndex) crit.add(Restrictions.eq("name", name)).addOrder(Order.desc("date")).setMaxResults(1).list().get(0);
 	}
 
 	@Override
@@ -40,7 +40,8 @@ public class StockIndexDaoImpl implements StockIndexDao {
 		List<String> names = sessionFactory.getCurrentSession().createQuery("select distinct name from StockIndex index").list();
 		Set<StockIndex> ret = new HashSet<StockIndex>();
 		for (String name : names){
-			Query query = sessionFactory.getCurrentSession().createQuery("from StockIndex index where index.name = '" + name + "' order by timestamp desc");
+			Query query = sessionFactory.getCurrentSession().createQuery("from StockIndex index where index.name = ? order by timestamp desc");
+			query.setString(0, name);
 			query.setMaxResults(1);
 			StockIndex ind = (StockIndex) query.list().get(0);
 			ret.add(ind);
