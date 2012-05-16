@@ -13,6 +13,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+/** Stock index provider which connects to www.bankier.pl website */
 public class BankierStockIndexProvider extends AbstractStockIndexProvider {
 	
 	private static final String BANKIER_URL = "http://www.bankier.pl/inwestowanie/notowania/indeksy.html";

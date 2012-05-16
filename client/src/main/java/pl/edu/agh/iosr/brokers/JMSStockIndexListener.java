@@ -5,6 +5,8 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
 
+/** JMS message listener which saves StockIndex instances to the database 
+ */
 public class JMSStockIndexListener implements MessageListener {
 	
 	private StockIndexDao dao;

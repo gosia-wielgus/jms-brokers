@@ -17,7 +17,7 @@ public class App
     public static void main( String[] args ) throws Exception {
         BrokerService broker = new BrokerService();
 
-        String url = "tcp://localhost:61616";
+        String url = "ssl://localhost:61617?needClientAuth=true";
         
         List<StockIndex> indices = new ArrayList<StockIndex>();
         indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));

@@ -13,6 +13,8 @@ import javax.jms.Topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
+/** A simple threaded stock index data receiver listening on ActiveMQ URL. 
+ */
 public class StockIndexSubscriber {
 	private MessageConsumer consumer;
 	private Session session;

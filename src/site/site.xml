@@ -11,6 +11,7 @@
 				<item name="Stock Indices Server" href="server-architecture.html" />
 				<item name="Spring MVC Client" href="client-architecture.html" />
 			</item>
+                        <item name="Security" href="security.html" />
 		</menu>
 		<menu ref="modules" />
 		<menu name="Team Meetings">

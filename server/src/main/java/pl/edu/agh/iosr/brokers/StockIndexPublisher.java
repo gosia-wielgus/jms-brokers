@@ -15,6 +15,11 @@ import javax.jms.Topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
+/** A publisher which can send stock data to a given ActiveMQ connector URL.
+ * 
+ * After calling <tt>start</tt> method publisher is ready to accept messages to 
+ * send.  
+ */
 public class StockIndexPublisher {
 	private Session session;
 	private Connection connection;

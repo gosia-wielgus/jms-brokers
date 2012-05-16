@@ -13,6 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/** Controller for the page depicting current stock index prices.
+ */
 public class MainController implements Controller {
 	StockIndexDao dao;
 	public void setDao(StockIndexDao dao) {

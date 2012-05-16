@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/** Cotroller for sending JSON-encoded current stock index data */
 public class StockDataController implements Controller {
 	StockIndexDao dao;
 	public void setDao(StockIndexDao dao) {

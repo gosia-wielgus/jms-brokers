@@ -142,6 +142,11 @@
 			<artifactId>hsqldb</artifactId>
 			<version>1.8.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 	</dependencies>
 	<distributionManagement>
 		<site>

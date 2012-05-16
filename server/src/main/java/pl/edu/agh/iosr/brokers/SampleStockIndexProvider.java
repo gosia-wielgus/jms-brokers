@@ -6,8 +6,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-
-
+/** Fake stock index provider, which generates variations in stock index 
+ *  randomly. 
+ */
 public class SampleStockIndexProvider extends AbstractStockIndexProvider {
 
 	int interval;

@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/** Simple StockIndex dao implementation, saving indices in memory */
 public class MemoryStockIndexDao implements StockIndexDao {
 	private Map<String, StockIndex> indexMap = new HashMap<String, StockIndex>();
 	public void saveStockIndex(StockIndex index) {

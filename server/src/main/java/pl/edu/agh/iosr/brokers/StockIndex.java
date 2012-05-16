@@ -3,6 +3,9 @@ package pl.edu.agh.iosr.brokers;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/** A data structure which represents stock market index price in a given
+ * instanit of time.
+ */
 public class StockIndex implements Serializable {
 	private static final long serialVersionUID = 1L;
 
