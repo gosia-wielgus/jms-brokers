@@ -2,13 +2,9 @@ package pl.edu.agh.iosr.brokers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
-import javax.jms.*;
-import javax.naming.Context;
-import javax.naming.InitialContext;
+import javax.jms.JMSException;
 
-import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.BrokerService;
 
 

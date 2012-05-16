@@ -32,7 +32,6 @@ public class SampleStockIndexProvider extends AbstractStockIndexProvider {
 	}
 	
 	private void dispatchAll() {
-		final long timestamp = new Date().getTime();
 		for (int i=0; i<indices.size(); i++) {
 			StockIndex index = indices.get(i);
 			index = updateStockIndex(index);

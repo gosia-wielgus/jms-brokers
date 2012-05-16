@@ -3,9 +3,7 @@ package pl.edu.agh.iosr.brokers;
 import java.util.List;
 
 import javax.jms.Connection;
-import javax.jms.Destination;
 import javax.jms.JMSException;
-import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.ObjectMessage;
 import javax.jms.Session;
@@ -33,8 +31,6 @@ public class StockIndexSubscriber {
         // Create a Connection
         connection = connectionFactory.createConnection();
         connection.start();
-
-        //connection.setExceptionListener(this);
 
         // Create a Session
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);

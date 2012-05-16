@@ -1,23 +1,19 @@
 package pl.edu.agh.iosr.brokers;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
-import org.json.JSONArray;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.servlet.mvc.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.jms.JMSException;
-import javax.management.RuntimeErrorException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Cotroller for sending JSON-encoded current stock index data */
+/** Controller for sending JSON-encoded current stock index data */
 public class StockDataController implements Controller {
 	StockIndexDao dao;
 	public void setDao(StockIndexDao dao) {
