@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
     <item>
-      <title>File: 17,
-             Errors: 843,
+      <title>File: 18,
+             Errors: 969,
              Warnings: 0,
              Infos: 0
       </title>
@@ -38,7 +38,7 @@
                   0
                 </td>
                 <td>
-                  29
+                  30
                 </td>
               </tr>
                           <tr>
@@ -80,7 +80,7 @@
                   0
                 </td>
                 <td>
-                  62
+                  77
                 </td>
               </tr>
                           <tr>
@@ -108,7 +108,7 @@
                   0
                 </td>
                 <td>
-                  49
+                  50
                 </td>
               </tr>
                           <tr>
@@ -122,7 +122,7 @@
                   0
                 </td>
                 <td>
-                  11
+                  10
                 </td>
               </tr>
                           <tr>
@@ -178,7 +178,21 @@
                   0
                 </td>
                 <td>
-                  25
+                  23
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/checkstyle.html#pl.edu.agh.iosr.brokers.GoogleStockIndexProvider.java">pl/edu/agh/iosr/brokers/GoogleStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  116
                 </td>
               </tr>
                           <tr>
@@ -192,7 +206,7 @@
                   0
                 </td>
                 <td>
-                  156
+                  155
                 </td>
               </tr>
                           <tr>
@@ -220,7 +234,7 @@
                   0
                 </td>
                 <td>
-                  60
+                  56
                 </td>
               </tr>
                           <tr>
@@ -234,7 +248,7 @@
                   0
                 </td>
                 <td>
-                  7
+                  10
                 </td>
               </tr>
                           <tr>
@@ -248,7 +262,7 @@
                   0
                 </td>
                 <td>
-                  56
+                  54
                 </td>
               </tr>
                           <tr>

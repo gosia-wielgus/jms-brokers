@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
     <item>
-      <title>File: 9,
-             Errors: 571,
+      <title>File: 10,
+             Errors: 702,
              Warnings: 0,
              Infos: 0
       </title>
@@ -38,7 +38,7 @@
                   0
                 </td>
                 <td>
-                  156
+                  155
                 </td>
               </tr>
                           <tr>
@@ -66,7 +66,7 @@
                   0
                 </td>
                 <td>
-                  62
+                  77
                 </td>
               </tr>
                           <tr>
@@ -80,7 +80,7 @@
                   0
                 </td>
                 <td>
-                  7
+                  10
                 </td>
               </tr>
                           <tr>
@@ -94,7 +94,7 @@
                   0
                 </td>
                 <td>
-                  53
+                  51
                 </td>
               </tr>
                           <tr>
@@ -151,6 +151,20 @@
                 </td>
                 <td>
                   4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.GoogleStockIndexProvider.java">pl/edu/agh/iosr/brokers/GoogleStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  116
                 </td>
               </tr>
                       </tbody>
