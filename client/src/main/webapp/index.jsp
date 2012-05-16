@@ -1,1 +1,4 @@
-go to <a href="index.htm">index.htm</a>
+<%
+String redirectURL = "index.htm";
+response.sendRedirect(redirectURL);
+%>

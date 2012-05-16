@@ -47,7 +47,7 @@
 		<property name="dao" ref="dao"></property>
 	</bean>
 	<bean id="destination" class="org.apache.activemq.command.ActiveMQTopic">
-		<constructor-arg value="brokers.pl.wig20,brokers.pl.wig" />
+		<constructor-arg value="brokers.pl.wig20,brokers.pl.wig,brokers.nasdaq.goog,brokers.nasdaq.msft" />
 	</bean>
 
 	<amq:broker useJmx="false" persistent="false">

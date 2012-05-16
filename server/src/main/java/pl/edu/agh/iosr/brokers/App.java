@@ -15,9 +15,6 @@ public class App
 
         String url = "ssl://localhost:61616";
         
-        List<StockIndex> indices = new ArrayList<StockIndex>();
-        indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));
-        indices.add(new StockIndex("pl.wig20", "WIG20", "1000", "0", 0));
 	     // configure the broker
 	    broker.addConnector(url);
 
@@ -26,7 +23,10 @@ public class App
 	    final StockIndexPublisher publisher = new StockIndexPublisher(url);
 	    publisher.start();
 	    
-	    BankierStockIndexProvider provider = new BankierStockIndexProvider(30000, indices);
+        List<StockIndex> indices = new ArrayList<StockIndex>();
+        indices.add(new StockIndex("pl.wig", "WIG", "10000", "0", 0));
+        indices.add(new StockIndex("pl.wig20", "WIG20", "1000", "0", 0));
+	    StockIndexProvider provider = new BankierStockIndexProvider(30000, indices);
 	    provider.setOnStockIndex(new StockIndexListener() {
 			
 			@Override
@@ -40,6 +40,23 @@ public class App
 			}
 		});
 	    provider.start();
+        indices = new ArrayList<StockIndex>();
+        indices.add(new StockIndex("nasdaq.goog", "NASDAQ:GOOG", "10000", "0", 0));
+        indices.add(new StockIndex("nasdaq.msft", "NASDAQ:MSFT", "10000", "0", 0));
+	    provider = new GoogleStockIndexProvider(30000, indices);
+	    provider.setOnStockIndex(new StockIndexListener() {
+			
+			@Override
+			public void onStockIndex(StockIndex index) {
+				try {
+					publisher.send(index);
+				} catch (JMSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+	    provider.start();	    
     }
 /*
     public static void doRabbit() throws Exception {
