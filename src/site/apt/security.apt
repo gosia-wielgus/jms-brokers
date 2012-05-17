@@ -16,7 +16,7 @@ System security assessment
 
     * Subverted client machine
 
- * Subverted server machine
+    * Subverted server machine
 
  They may center on following components:
 
@@ -32,6 +32,8 @@ System security assessment
 
     * Be an attack vector on web application clients, server machines
 
+ Effective reaction to attack threats should depend on it's likelihood and possible damage
+ 
 
 Installation recommendations
 
@@ -42,8 +44,6 @@ Installation recommendations
     * Disruption of service by outsiders should be mitigated by only allowing CA-trusted  clients to communicate with the server and possibly by firewall rules.
 
     * Operation of web application should be confined to internal networks, as outside access increases the attack surface.
-
-    * 
 
 
  Tomcat hardening:
@@ -70,7 +70,7 @@ Setting up a proxy server
 
  To use the web application with apache2 proxy server:
 
-  * install apache2 with mod_proxy, mod_proxy_http, mod_security
+  * install apache2 with mod_proxy, mod_proxy_http and preferably mod_security and mod_evasive
 
   * update apache configuration, add:
 
@@ -83,6 +83,23 @@ ProxyPassReverse /client-1.0-SNAPSHOT http://localhost:8080/client-1.0-SNAPSHOT
 
 ----
     <Connector address="127.0.0.1" port="8080" proxyName="localhost" proxyPort="80 ... />
+----
+
+  * Possibly add mod_security recommended config options
+
+
+  * Possibly add mod_evasive configuration to prevent brute force login attacks:
+
+----
+<IfModule mod_evasive20.c>
+DOSHashTableSize    3097
+DOSPageCount        2
+DOSSiteCount        50
+DOSPageInterval     1
+DOSSiteInterval     1
+DOSBlockingPeriod   60
+DOSEmailNotify exapmle@example.com
+</IfModule>
 ----
 
 Security improvements
