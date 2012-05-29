@@ -115,6 +115,14 @@ Security improvements
 
 Security scan results
 
+* Nessus 
+
+ Nessus identified mostly self-signed certificates and information disclosure. The more severe instances of information disclosure of apache-httpd were present only on 127.0.0.1 interface, and were not exploitable from outside. 
+ 
+ * {{https://github.com/downloads/gosia-wielgus/jms-brokers/nessus-internal.pdf}} - internal network scan
+
+ * {{https://github.com/downloads/gosia-wielgus/jms-brokers/nessus-web.pdf}} - web application scan
+
 * Nikto security scanner
 
  Nikto could identify unneccesarily allowed HTTP methods, but these are not actually in use. There are also warnings about disclosed server information.
