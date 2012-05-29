@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.5308641975308642" branch-rate="0.5" lines-covered="43" lines-valid="81" branches-covered="5" branches-valid="10" complexity="1.5357142857142858" version="1.9.4.1" timestamp="1337175730600">
+<coverage line-rate="0.5308641975308642" branch-rate="0.5" lines-covered="43" lines-valid="81" branches-covered="5" branches-valid="10" complexity="1.5357142857142858" version="1.9.4.1" timestamp="1338328947598">
 	<sources>
 		<source>/home/admchr/agh/jms-brokers/client/src/main/java</source>
 		<source>--source</source>
@@ -13,38 +13,38 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="10" hits="11" branch="false"/>
+								<line number="10" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="onMessage" signature="(Ljavax/jms/Message;)V" line-rate="0.7142857142857143" branch-rate="1.0">
 							<lines>
-								<line number="16" hits="11" branch="false"/>
-								<line number="18" hits="11" branch="false"/>
-								<line number="19" hits="11" branch="false"/>
+								<line number="16" hits="14" branch="false"/>
+								<line number="18" hits="14" branch="false"/>
+								<line number="19" hits="14" branch="false"/>
 								<line number="20" hits="0" branch="false"/>
 								<line number="21" hits="0" branch="false"/>
 								<line number="22" hits="9" branch="false"/>
-								<line number="23" hits="11" branch="false"/>
+								<line number="23" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="26" hits="11" branch="false"/>
-								<line number="27" hits="11" branch="false"/>
+								<line number="26" hits="14" branch="false"/>
+								<line number="27" hits="14" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="10" hits="11" branch="false"/>
-						<line number="16" hits="11" branch="false"/>
-						<line number="18" hits="11" branch="false"/>
-						<line number="19" hits="11" branch="false"/>
+						<line number="10" hits="14" branch="false"/>
+						<line number="16" hits="14" branch="false"/>
+						<line number="18" hits="14" branch="false"/>
+						<line number="19" hits="14" branch="false"/>
 						<line number="20" hits="0" branch="false"/>
 						<line number="21" hits="0" branch="false"/>
 						<line number="22" hits="9" branch="false"/>
-						<line number="23" hits="11" branch="false"/>
-						<line number="26" hits="11" branch="false"/>
-						<line number="27" hits="11" branch="false"/>
+						<line number="23" hits="14" branch="false"/>
+						<line number="26" hits="14" branch="false"/>
+						<line number="27" hits="14" branch="false"/>
 					</lines>
 				</class>
 				<class name="pl.edu.agh.iosr.brokers.LoginController" filename="pl/edu/agh/iosr/brokers/LoginController.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
@@ -75,156 +75,156 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="17" hits="11" branch="false"/>
+								<line number="17" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="handleRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/springframework/web/servlet/ModelAndView;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="26" hits="11" branch="false"/>
-								<line number="27" hits="11" branch="false"/>
-								<line number="28" hits="11" branch="false"/>
-								<line number="29" hits="11" branch="false"/>
+								<line number="26" hits="14" branch="false"/>
+								<line number="27" hits="14" branch="false"/>
+								<line number="28" hits="14" branch="false"/>
+								<line number="29" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="20" hits="11" branch="false"/>
-								<line number="21" hits="11" branch="false"/>
+								<line number="20" hits="14" branch="false"/>
+								<line number="21" hits="14" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="17" hits="11" branch="false"/>
-						<line number="20" hits="11" branch="false"/>
-						<line number="21" hits="11" branch="false"/>
-						<line number="26" hits="11" branch="false"/>
-						<line number="27" hits="11" branch="false"/>
-						<line number="28" hits="11" branch="false"/>
-						<line number="29" hits="11" branch="false"/>
+						<line number="17" hits="14" branch="false"/>
+						<line number="20" hits="14" branch="false"/>
+						<line number="21" hits="14" branch="false"/>
+						<line number="26" hits="14" branch="false"/>
+						<line number="27" hits="14" branch="false"/>
+						<line number="28" hits="14" branch="false"/>
+						<line number="29" hits="14" branch="false"/>
 					</lines>
 				</class>
 				<class name="pl.edu.agh.iosr.brokers.MemoryStockIndexDao" filename="pl/edu/agh/iosr/brokers/MemoryStockIndexDao.java" line-rate="1.0" branch-rate="0.75" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="9" hits="26" branch="false"/>
-								<line number="10" hits="22" branch="false"/>
+								<line number="9" hits="38" branch="false"/>
+								<line number="10" hits="28" branch="false"/>
 							</lines>
 						</method>
 						<method name="getAllLatest" signature="()Ljava/util/Set;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="26" hits="11" branch="false"/>
+								<line number="26" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="getLatest" signature="(Ljava/lang/String;)Lpl/edu/agh/iosr/brokers/StockIndex;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="21" hits="22" branch="false"/>
+								<line number="21" hits="28" branch="false"/>
 							</lines>
 						</method>
 						<method name="saveStockIndex" signature="(Lpl/edu/agh/iosr/brokers/StockIndex;)V" line-rate="1.0" branch-rate="0.75">
 							<lines>
-								<line number="12" hits="33" branch="false"/>
-								<line number="13" hits="33" branch="true" condition-coverage="75% (3/4)">
+								<line number="12" hits="42" branch="false"/>
+								<line number="13" hits="42" branch="true" condition-coverage="75% (3/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 										<condition number="1" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="14" hits="11" branch="false"/>
-								<line number="16" hits="22" branch="false"/>
-								<line number="17" hits="22" branch="false"/>
+								<line number="14" hits="14" branch="false"/>
+								<line number="16" hits="28" branch="false"/>
+								<line number="17" hits="28" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="9" hits="26" branch="false"/>
-						<line number="10" hits="22" branch="false"/>
-						<line number="12" hits="33" branch="false"/>
-						<line number="13" hits="33" branch="true" condition-coverage="75% (3/4)">
+						<line number="9" hits="38" branch="false"/>
+						<line number="10" hits="28" branch="false"/>
+						<line number="12" hits="42" branch="false"/>
+						<line number="13" hits="42" branch="true" condition-coverage="75% (3/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="14" hits="11" branch="false"/>
-						<line number="16" hits="22" branch="false"/>
-						<line number="17" hits="22" branch="false"/>
-						<line number="21" hits="22" branch="false"/>
-						<line number="26" hits="11" branch="false"/>
+						<line number="14" hits="14" branch="false"/>
+						<line number="16" hits="28" branch="false"/>
+						<line number="17" hits="28" branch="false"/>
+						<line number="21" hits="28" branch="false"/>
+						<line number="26" hits="14" branch="false"/>
 					</lines>
 				</class>
 				<class name="pl.edu.agh.iosr.brokers.StockDataController" filename="pl/edu/agh/iosr/brokers/StockDataController.java" line-rate="0.8260869565217391" branch-rate="1.0" complexity="3.3333333333333335">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="17" hits="11" branch="false"/>
+								<line number="17" hits="14" branch="false"/>
 							</lines>
 						</method>
 						<method name="handleRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/springframework/web/servlet/ModelAndView;" line-rate="0.8181818181818182" branch-rate="1.0">
 							<lines>
-								<line number="26" hits="11" branch="false"/>
-								<line number="27" hits="11" branch="false"/>
-								<line number="28" hits="11" branch="false"/>
-								<line number="29" hits="33" branch="true" condition-coverage="100% (2/2)">
+								<line number="26" hits="14" branch="false"/>
+								<line number="27" hits="14" branch="false"/>
+								<line number="28" hits="14" branch="false"/>
+								<line number="29" hits="42" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="30" hits="11" branch="false"/>
-								<line number="33" hits="11" branch="false"/>
-								<line number="34" hits="11" branch="false"/>
-								<line number="36" hits="11" branch="false"/>
-								<line number="37" hits="11" branch="false"/>
+								<line number="30" hits="14" branch="false"/>
+								<line number="33" hits="14" branch="false"/>
+								<line number="34" hits="14" branch="false"/>
+								<line number="36" hits="14" branch="false"/>
+								<line number="37" hits="14" branch="false"/>
 								<line number="38" hits="0" branch="false"/>
 								<line number="39" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="serialize" signature="(Lpl/edu/agh/iosr/brokers/StockIndex;)Lorg/json/JSONObject;" line-rate="0.7777777777777778" branch-rate="1.0">
 							<lines>
-								<line number="45" hits="11" branch="false"/>
-								<line number="46" hits="11" branch="false"/>
-								<line number="47" hits="11" branch="false"/>
-								<line number="48" hits="11" branch="false"/>
-								<line number="49" hits="11" branch="false"/>
-								<line number="50" hits="11" branch="false"/>
-								<line number="51" hits="11" branch="false"/>
+								<line number="45" hits="14" branch="false"/>
+								<line number="46" hits="14" branch="false"/>
+								<line number="47" hits="14" branch="false"/>
+								<line number="48" hits="14" branch="false"/>
+								<line number="49" hits="14" branch="false"/>
+								<line number="50" hits="14" branch="false"/>
+								<line number="51" hits="14" branch="false"/>
 								<line number="52" hits="0" branch="false"/>
 								<line number="53" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="setDao" signature="(Lpl/edu/agh/iosr/brokers/StockIndexDao;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="20" hits="11" branch="false"/>
-								<line number="21" hits="11" branch="false"/>
+								<line number="20" hits="14" branch="false"/>
+								<line number="21" hits="14" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="17" hits="11" branch="false"/>
-						<line number="20" hits="11" branch="false"/>
-						<line number="21" hits="11" branch="false"/>
-						<line number="26" hits="11" branch="false"/>
-						<line number="27" hits="11" branch="false"/>
-						<line number="28" hits="11" branch="false"/>
-						<line number="29" hits="33" branch="true" condition-coverage="100% (2/2)">
+						<line number="17" hits="14" branch="false"/>
+						<line number="20" hits="14" branch="false"/>
+						<line number="21" hits="14" branch="false"/>
+						<line number="26" hits="14" branch="false"/>
+						<line number="27" hits="14" branch="false"/>
+						<line number="28" hits="14" branch="false"/>
+						<line number="29" hits="42" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="30" hits="11" branch="false"/>
-						<line number="33" hits="11" branch="false"/>
-						<line number="34" hits="11" branch="false"/>
-						<line number="36" hits="11" branch="false"/>
-						<line number="37" hits="11" branch="false"/>
+						<line number="30" hits="14" branch="false"/>
+						<line number="33" hits="14" branch="false"/>
+						<line number="34" hits="14" branch="false"/>
+						<line number="36" hits="14" branch="false"/>
+						<line number="37" hits="14" branch="false"/>
 						<line number="38" hits="0" branch="false"/>
 						<line number="39" hits="0" branch="false"/>
-						<line number="45" hits="11" branch="false"/>
-						<line number="46" hits="11" branch="false"/>
-						<line number="47" hits="11" branch="false"/>
-						<line number="48" hits="11" branch="false"/>
-						<line number="49" hits="11" branch="false"/>
-						<line number="50" hits="11" branch="false"/>
-						<line number="51" hits="11" branch="false"/>
+						<line number="45" hits="14" branch="false"/>
+						<line number="46" hits="14" branch="false"/>
+						<line number="47" hits="14" branch="false"/>
+						<line number="48" hits="14" branch="false"/>
+						<line number="49" hits="14" branch="false"/>
+						<line number="50" hits="14" branch="false"/>
+						<line number="51" hits="14" branch="false"/>
 						<line number="52" hits="0" branch="false"/>
 						<line number="53" hits="0" branch="false"/>
 					</lines>
