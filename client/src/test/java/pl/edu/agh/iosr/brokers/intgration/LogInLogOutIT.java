@@ -9,13 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class ITLogInLogOutTest {
+public class LogInLogOutIT {
 
-	private static final String USER = "user";
-	private static final String PASS = "password";
-	private static final long TIMEOUT = 2000;
+	protected static final String USER = "user";
+	protected static final String PASS = "password";
+	private static final long TIMEOUT = 5000;
 
-	WebDriver driver;
+	protected WebDriver driver;
 
 	@Before
 	public void setUp() {

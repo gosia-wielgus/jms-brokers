@@ -152,6 +152,11 @@
 			<artifactId>selenium-htmlunit-driver</artifactId>
 			<version>2.21.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -179,7 +184,8 @@
 						<phase>pre-integration-test</phase>
 						<configuration>
 							<tasks>
-								<copydir src="${project.basedir}/src/test/resources/db" dest="db" />
+								<copydir src="${project.basedir}/src/test/resources/db"
+									dest="db" />
 							</tasks>
 						</configuration>
 						<goals>
@@ -201,7 +207,7 @@
 							<arguments>
 								<argument>-c</argument>
 								<argument>ps -C sh -o pid= | xargs ps -o pid= --ppid | xargs
-									kill</argument>
+									kill; true</argument>
 							</arguments>
 						</configuration>
 						<goals>
