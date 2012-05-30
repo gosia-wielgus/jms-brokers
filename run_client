@@ -1,4 +1,3 @@
 #!/bin/sh
-cd client
-mvn org.mortbay.jetty:maven-jetty-plugin:run
+mvn -f client/pom.xml org.mortbay.jetty:maven-jetty-plugin:run
 

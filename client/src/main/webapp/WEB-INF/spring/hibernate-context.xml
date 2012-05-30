@@ -23,7 +23,7 @@
     <bean id="dataSource"
         class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
         p:driverClassName="org.hsqldb.jdbcDriver"
-        p:url="jdbc:hsqldb:mem://localhost" p:username="sa"
+        p:url="jdbc:hsqldb:file:client/db/storage;hsqldb.write_delay=false;" p:username="sa"
         p:password="" />
 
 	<!-- Declare a transaction manager -->

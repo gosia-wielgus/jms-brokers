@@ -29,9 +29,6 @@ public class UserService implements UserDetailsService {
 							"ROLE_USER")));
 
 		} else {
-			
-			System.out.println("no user");
-			
 			throw new UsernameNotFoundException("No user with username '"
 					+ username + "' found!");
 		}

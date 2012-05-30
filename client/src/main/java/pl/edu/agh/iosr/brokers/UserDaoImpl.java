@@ -20,9 +20,6 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public User getUser(String name) {
-		User user = new User("user", "password");
-		sessionFactory.getCurrentSession().save(user);
-
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(User.class);	
 		return (User) crit.add(Restrictions.eq("name", name)).setMaxResults(1).list().get(0);
 	}
