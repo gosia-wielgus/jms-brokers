@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
     <item>
-      <title>File: 8,
-             Errors: 257,
+      <title>File: 11,
+             Errors: 357,
              Warnings: 0,
              Infos: 0
       </title>
@@ -29,20 +29,6 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.JMSStockIndexListener.java">pl/edu/agh/iosr/brokers/JMSStockIndexListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  30
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDao.java">pl/edu/agh/iosr/brokers/StockIndexDao.java</a>
                 </td>
                 <td>
@@ -57,6 +43,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.JMSStockIndexListener.java">pl/edu/agh/iosr/brokers/JMSStockIndexListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  32
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.UserService.java">pl/edu/agh/iosr/brokers/UserService.java</a>
                 </td>
                 <td>
@@ -66,7 +66,21 @@
                   0
                 </td>
                 <td>
-                  49
+                  32
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.User.java">pl/edu/agh/iosr/brokers/User.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  74
                 </td>
               </tr>
                           <tr>
@@ -85,35 +99,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDaoImpl.java">pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  50
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.LoginController.java">pl/edu/agh/iosr/brokers/LoginController.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.MemoryStockIndexDao.java">pl/edu/agh/iosr/brokers/MemoryStockIndexDao.java</a>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.UserDaoImpl.java">pl/edu/agh/iosr/brokers/UserDaoImpl.java</a>
                 </td>
                 <td>
                   0
@@ -127,6 +113,62 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.UserDao.java">pl/edu/agh/iosr/brokers/UserDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDaoImpl.java">pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  51
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.MemoryStockIndexDao.java">pl/edu/agh/iosr/brokers/MemoryStockIndexDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.LoginController.java">pl/edu/agh/iosr/brokers/LoginController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.MainController.java">pl/edu/agh/iosr/brokers/MainController.java</a>
                 </td>
                 <td>
@@ -136,7 +178,7 @@
                   0
                 </td>
                 <td>
-                  22
+                  23
                 </td>
               </tr>
                       </tbody>

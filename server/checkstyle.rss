@@ -9,7 +9,7 @@
     <copyright>&#169;2012</copyright>
     <item>
       <title>File: 10,
-             Errors: 692,
+             Errors: 702,
              Warnings: 0,
              Infos: 0
       </title>
@@ -38,7 +38,7 @@
                   0
                 </td>
                 <td>
-                  155
+                  156
                 </td>
               </tr>
                           <tr>
@@ -52,21 +52,7 @@
                   0
                 </td>
                 <td>
-                  30
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.App.java">pl/edu/agh/iosr/brokers/App.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  77
+                  32
                 </td>
               </tr>
                           <tr>
@@ -80,7 +66,21 @@
                   0
                 </td>
                 <td>
-                  10
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.App.java">pl/edu/agh/iosr/brokers/App.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  78
                 </td>
               </tr>
                           <tr>
@@ -94,7 +94,7 @@
                   0
                 </td>
                 <td>
-                  51
+                  52
                 </td>
               </tr>
                           <tr>
@@ -108,7 +108,7 @@
                   0
                 </td>
                 <td>
-                  62
+                  63
                 </td>
               </tr>
                           <tr>
@@ -122,21 +122,7 @@
                   0
                 </td>
                 <td>
-                  132
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.SampleStockIndexProvider.java">pl/edu/agh/iosr/brokers/SampleStockIndexProvider.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  65
+                  133
                 </td>
               </tr>
                           <tr>
@@ -155,6 +141,20 @@
               </tr>
                           <tr>
                 <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.SampleStockIndexProvider.java">pl/edu/agh/iosr/brokers/SampleStockIndexProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  66
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://gosia-wielgus.github.com/jms-brokers/server/checkstyle.html#pl.edu.agh.iosr.brokers.GoogleStockIndexProvider.java">pl/edu/agh/iosr/brokers/GoogleStockIndexProvider.java</a>
                 </td>
                 <td>
@@ -164,7 +164,7 @@
                   0
                 </td>
                 <td>
-                  106
+                  107
                 </td>
               </tr>
                       </tbody>
