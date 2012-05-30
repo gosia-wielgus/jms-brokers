@@ -9,6 +9,7 @@
 		<property name="hbm2ddl.auto">create</property>
 
 		<mapping resource="hibernate/StockIndex.hbm.xml" />
+		<mapping resource="hibernate/User.hbm.xml" />
 
 	</session-factory>
 </hibernate-configuration>

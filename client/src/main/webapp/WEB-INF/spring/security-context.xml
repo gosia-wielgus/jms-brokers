@@ -3,6 +3,8 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
                                  http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
+	<beans:import resource="hibernate-context.xml" />
+
     <http auto-config="true">
 	    <intercept-url pattern="/login.htm" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 	    <intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
@@ -12,7 +14,13 @@
 	    <logout logout-url="/logout.htm" logout-success-url="/login.htm" />
     </http>
 
-    <beans:bean id="userService" class="pl.edu.agh.iosr.brokers.UserService" />
+	<beans:bean id="userService" class="pl.edu.agh.iosr.brokers.UserService">
+		<beans:property name="userDao" ref="userDao" />
+	</beans:bean>
+	<beans:bean id="userDao" class="pl.edu.agh.iosr.brokers.UserDaoImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+
     <authentication-manager>
         <authentication-provider user-service-ref="userService" />
     </authentication-manager>
