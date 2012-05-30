@@ -3,3 +3,5 @@ target/
 .project
 .classpath
 activemq-data/
+db/
+bin/

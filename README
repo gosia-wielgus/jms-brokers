@@ -2,17 +2,22 @@ Java JMS Stock Brokers
 
 Project page http://gosia-wielgus.github.com/jms-brokers
 
-Be careful with submodule, after clone run:
-
-git submodule init
-git submodule update
-cd site
-git checkout gh-pages
+To clone run:
+	
+	cd jms-brokers/site
+	git checkout gh-pages
 
 To push deploy site:
 
-mvn site-deploy
-cd site
-git add .
-git commit -am 'Your comment'
-git push origin gh-pages
+	cd site
+	rm -rf *
+	cd ..
+	mvn site-deploy
+	cd site
+	git add .
+	git commit -am 'Your comment'
+	git push origin gh-pages
+	cd ..
+	git commit -am 'Your comment'
+	git push
+	
