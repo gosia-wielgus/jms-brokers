@@ -26,7 +26,8 @@ public class UserDaoImpl implements UserDao {
 		List<?> list = crit.add(Restrictions.eq("name", name)).setMaxResults(1).list();
 		if (list.size() == 0)
 			return null;
-		return (User) list.get(0);
+		User user = (User) list.get(0);
+		return user;
 	}
 
 }

@@ -24,12 +24,15 @@ public class AuthenticationProviderImpl implements AuthenticationProvider {
 		Object cred = authentication.getCredentials();
 		if (cred == null)
 			throw new BadCredentialsException("No credentials");
-			
+		
 		String pass = cred.toString();
 		
 		User user = dao.getUser(authentication.getName());
+		if (user == null)
+			throw new BadCredentialsException("Bad username or password");
 		
-		if (user == null || !user.getPassword().equals(pass))
+		PasswordHash hash = PasswordHash.fromHash(user.getPassword());
+		if (!hash.compareToPassword(pass))
 			throw new BadCredentialsException("Bad username or password");
 		
 		ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();

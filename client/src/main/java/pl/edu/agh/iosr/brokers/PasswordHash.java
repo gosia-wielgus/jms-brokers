@@ -36,6 +36,9 @@ public class PasswordHash {
 	public static PasswordHash fromHash(String hash) {
 		String[] list = hash.split(":");
 		
+		if (list.length != 3)
+			throw new IllegalArgumentException(" \""+hash+"\" is not a legal salted hash ");
+		
 		return new PasswordHash(list[2], list[1]);
 	}
 	
@@ -46,14 +49,18 @@ public class PasswordHash {
 	public String toString() {
 		return ":"+salt+":"+hash;
 	}
-	
+	private static final int ITERATIONS = 1000;
 	private static String hashSalted(String pass, String salt) {
 		String key = salt + "$" + pass;
 		MessageDigest md;
 		try {
 			md = MessageDigest.getInstance("SHA-1");
-			byte[] result = md.digest(key.getBytes("UTF-8"));
-			return bytesToString(result);
+			for (int i=0; i<ITERATIONS; i++) {
+				md.reset();
+				byte[] result = md.digest(key.getBytes("UTF-8"));
+				key = bytesToString(result);
+			}
+			return key;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

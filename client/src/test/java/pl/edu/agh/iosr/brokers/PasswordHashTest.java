@@ -11,6 +11,8 @@ public class PasswordHashTest {
 		assertPasswordEqual("hello");
 		assertPasswordEqual("a password that is correct090@#$@$@#$)()\n");
 		assertPasswordsNotEqual("a","b");
+		
+		System.out.println(PasswordHash.fromPassword("password").toString());
 	}
 
 	public void assertPasswordEqual(String p1) {
