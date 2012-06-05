@@ -20,9 +20,9 @@ public class ViewIndicesIT extends LogInLogOutIT {
 		for (int i=1; i<rows.size(); i++) {
 			List<WebElement> cells = rows.get(i).findElements(By.tagName("td"));
 			assertEquals(4, cells.size());
-			assertTrue(Double.valueOf(cells.get(1).getText()) > 0);
-			assertTrue(Double.valueOf(cells.get(2).getText()) > 0);
-			assertTrue(cells.get(3).getText().contains("%"));
+			assertTrue(cells.get(1).getText(), Double.valueOf(cells.get(1).getText()) > 0);
+			Double.valueOf(cells.get(2).getText());
+			assertTrue(cells.get(3).getText(), cells.get(3).getText().contains("%"));
 		}
 	}
 

@@ -2,12 +2,19 @@ package pl.edu.agh.iosr.brokers.intgration;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogInLogOutIT {
 
@@ -15,13 +22,17 @@ public class LogInLogOutIT {
 	protected static final String PASS = "password";
 	private static final long TIMEOUT = 5000;
 
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
-	@Before
-	public void setUp() {
-		driver = new HtmlUnitDriver();
+	@BeforeClass
+	public static void setUp() {
+		driver = new FirefoxDriver();
 	}
 
+	@AfterClass
+	public static void tearDown() {
+		driver.quit();
+	}
 	@Test
 	public void testCorrectLogin() {
 		login(USER, PASS);
@@ -64,16 +75,17 @@ public class LogInLogOutIT {
 		driver.findElement(By.name("submit")).click();
 	}
 
-	protected void assertElemenVisible(By by) {
-		long end = System.currentTimeMillis() + TIMEOUT;
-		while (System.currentTimeMillis() < end) {
-			WebElement resultsDiv = driver.findElement(by);
-			if (resultsDiv.isDisplayed()) {
-				break;
-			}
+	protected void assertElemenVisible(final By by) {
+		try {
+			(new WebDriverWait(driver, 10))
+				  .until(new ExpectedCondition<WebElement>(){
+						@Override
+						public WebElement apply(WebDriver d) {
+							return d.findElement(by);
+						}});
+		} catch (TimeoutException e) {
+			throw new RuntimeException("could not find " + by, e);
 		}
-		assertTrue("After " + TIMEOUT + "ms could not find element: " + by,
-				System.currentTimeMillis() < end);
 	}
 
 }
