@@ -1,5 +1,7 @@
 package pl.edu.agh.iosr.brokers;
 
+import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -21,7 +23,10 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User getUser(String name) {
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(User.class);	
-		return (User) crit.add(Restrictions.eq("name", name)).setMaxResults(1).list().get(0);
+		List<?> list = crit.add(Restrictions.eq("name", name)).setMaxResults(1).list();
+		if (list.size() == 0)
+			return null;
+		return (User) list.get(0);
 	}
 
 }
