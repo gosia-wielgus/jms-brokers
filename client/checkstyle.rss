@@ -8,8 +8,8 @@
     <language>en-us</language>
     <copyright>&#169;2012</copyright>
     <item>
-      <title>File: 11,
-             Errors: 357,
+      <title>File: 13,
+             Errors: 526,
              Warnings: 0,
              Infos: 0
       </title>
@@ -52,7 +52,7 @@
                   0
                 </td>
                 <td>
-                  32
+                  30
                 </td>
               </tr>
                           <tr>
@@ -66,49 +66,7 @@
                   0
                 </td>
                 <td>
-                  32
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.User.java">pl/edu/agh/iosr/brokers/User.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  74
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockDataController.java">pl/edu/agh/iosr/brokers/StockDataController.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  55
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.UserDaoImpl.java">pl/edu/agh/iosr/brokers/UserDaoImpl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  30
+                  31
                 </td>
               </tr>
                           <tr>
@@ -122,21 +80,7 @@
                   0
                 </td>
                 <td>
-                  7
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDaoImpl.java">pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  51
+                  6
                 </td>
               </tr>
                           <tr>
@@ -150,7 +94,7 @@
                   0
                 </td>
                 <td>
-                  31
+                  30
                 </td>
               </tr>
                           <tr>
@@ -164,7 +108,21 @@
                   0
                 </td>
                 <td>
-                  11
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockIndexDaoImpl.java">pl/edu/agh/iosr/brokers/StockIndexDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  50
                 </td>
               </tr>
                           <tr>
@@ -178,7 +136,77 @@
                   0
                 </td>
                 <td>
-                  23
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.StockDataController.java">pl/edu/agh/iosr/brokers/StockDataController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  54
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.User.java">pl/edu/agh/iosr/brokers/User.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  73
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.PasswordHash.java">pl/edu/agh/iosr/brokers/PasswordHash.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  113
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.UserDaoImpl.java">pl/edu/agh/iosr/brokers/UserDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  35
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://gosia-wielgus.github.com/jms-brokers/client/checkstyle.html#pl.edu.agh.iosr.brokers.AuthenticationProviderImpl.java">pl/edu/agh/iosr/brokers/AuthenticationProviderImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  61
                 </td>
               </tr>
                       </tbody>

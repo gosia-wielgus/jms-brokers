@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.5482456140350878" branch-rate="0.5" lines-covered="125" lines-valid="228" branches-covered="11" branches-valid="22" complexity="1.44" version="1.9.2" timestamp="1338375120147">
+<coverage line-rate="0.5462555066079295" branch-rate="0.5" lines-covered="124" lines-valid="227" branches-covered="11" branches-valid="22" complexity="1.44" version="1.9.4.1" timestamp="1338987741205">
 	<sources>
 		<source>--source</source>
-		<source>C:/cygwin/home/bdgh48/jms-brokers/server/src/main/java</source>
+		<source>/home/admchr/agh/jms-brokers/server/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="pl.edu.agh.iosr.brokers" line-rate="0.5482456140350878" branch-rate="0.5" complexity="1.44">
+		<package name="pl.edu.agh.iosr.brokers" line-rate="0.5462555066079295" branch-rate="0.5" complexity="1.44">
 			<classes>
 				<class name="pl.edu.agh.iosr.brokers.AbstractStockIndexProvider" filename="pl/edu/agh/iosr/brokers/AbstractStockIndexProvider.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
@@ -757,7 +757,7 @@
 						<line number="71" hits="1" branch="false"/>
 					</lines>
 				</class>
-				<class name="pl.edu.agh.iosr.brokers.StockIndexSubscriber" filename="pl/edu/agh/iosr/brokers/StockIndexSubscriber.java" line-rate="0.8260869565217391" branch-rate="1.0" complexity="1.25">
+				<class name="pl.edu.agh.iosr.brokers.StockIndexSubscriber" filename="pl/edu/agh/iosr/brokers/StockIndexSubscriber.java" line-rate="0.8181818181818182" branch-rate="1.0" complexity="1.25">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/List;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
@@ -795,7 +795,6 @@
 									</conditions>
 								</line>
 								<line number="40" hits="1" branch="false"/>
-								<line number="41" hits="1" branch="false"/>
 								<line number="42" hits="1" branch="false"/>
 								<line number="44" hits="1" branch="false"/>
 								<line number="47" hits="1" branch="false"/>
@@ -819,7 +818,6 @@
 							</conditions>
 						</line>
 						<line number="40" hits="1" branch="false"/>
-						<line number="41" hits="1" branch="false"/>
 						<line number="42" hits="1" branch="false"/>
 						<line number="44" hits="1" branch="false"/>
 						<line number="47" hits="1" branch="false"/>

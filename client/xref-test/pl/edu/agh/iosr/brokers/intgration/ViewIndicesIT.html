@@ -30,9 +30,9 @@
 <a class="jxr_linenumber" name="20" href="#20">20</a>  		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i=1; i&lt;rows.size(); i++) {
 <a class="jxr_linenumber" name="21" href="#21">21</a>  			List&lt;WebElement&gt; cells = rows.get(i).findElements(By.tagName(<span class="jxr_string">"td"</span>));
 <a class="jxr_linenumber" name="22" href="#22">22</a>  			assertEquals(4, cells.size());
-<a class="jxr_linenumber" name="23" href="#23">23</a>  			assertTrue(Double.valueOf(cells.get(1).getText()) &gt; 0);
-<a class="jxr_linenumber" name="24" href="#24">24</a>  			assertTrue(Double.valueOf(cells.get(2).getText()) &gt; 0);
-<a class="jxr_linenumber" name="25" href="#25">25</a>  			assertTrue(cells.get(3).getText().contains(<span class="jxr_string">"%"</span>));
+<a class="jxr_linenumber" name="23" href="#23">23</a>  			assertTrue(cells.get(1).getText(), Double.valueOf(cells.get(1).getText()) &gt; 0);
+<a class="jxr_linenumber" name="24" href="#24">24</a>  			Double.valueOf(cells.get(2).getText());
+<a class="jxr_linenumber" name="25" href="#25">25</a>  			assertTrue(cells.get(3).getText(), cells.get(3).getText().contains(<span class="jxr_string">"%"</span>));
 <a class="jxr_linenumber" name="26" href="#26">26</a>  		}
 <a class="jxr_linenumber" name="27" href="#27">27</a>  	}
 <a class="jxr_linenumber" name="28" href="#28">28</a>  
