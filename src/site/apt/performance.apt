@@ -32,12 +32,12 @@ Performance tuning report
 
     * Logging out (logout.htm)
 
- All of the different actions can be timed separately.
+ All of the different actions can be timed separately in a {{{./files/data.jmx}JMeter test plan}}.
 
 * Measurements taken before tuning
 
 *------------------------+--------:--------:--------:--------:--------:--------:
-|Page name               |requests|avg     |med     |90%     |min     |max     |
+||Page name              |requests||avg    ||med    ||90%    ||min    ||max    |
 *------------------------+--------:--------:--------:--------:--------:--------:
 |login.htm               |200     |2       |2       |3       |1       |9       |
 *------------------------+--------:--------:--------:--------:--------:--------:
