@@ -1,0 +1,51 @@
+    ---
+    Performance
+    ---
+    ---
+    ---
+
+Performance tuning report
+
+* Test design
+
+ In making the right decision about tuning the application performance it is important first to define the usage scenarios in which the program will be intensively exercised. Then through measurements the baseline performance is created against which any tuning efforts are checked. 
+
+ The JMS broker system consists of a central server sending updates to many web applications, which then forward the messages through HTTP responses to web browsers. The server is responsible for communication with a varying number of clients, but it is not expected that there will be more than a handful connected at any given moment. The real load is taken by the web applications which have to endure constant polling for stock data from the web browsers. 
+
+ A typical browser session consists of:
+
+    * A log in
+
+    * A long session of viewing the stock data, which generates timed requests (every 1s) to retrieve stock data
+
+    * A log out
+
+ Polling requests are the most frequently issued and therefore important action. Therefore the test plan consists of:
+
+    * Showing the login screen (login.htm)
+
+    * Logging in (j_spring_security_check)
+
+    * Showing the index page (index.htm)
+
+    * Polling for stock data 100 times (data.json)
+
+    * Logging out (logout.htm)
+
+ All of the different actions can be timed separately.
+
+* Measurements taken before tuning
+
+*------------------------+--------:--------:--------:--------:--------:--------:
+|Page name               |requests|avg     |med     |90%     |min     |max     |
+*------------------------+--------:--------:--------:--------:--------:--------:
+|login.htm               |200     |2       |2       |3       |1       |9       |
+*------------------------+--------:--------:--------:--------:--------:--------:
+|j_spring_security_check |200     |38      |37      |47      |24      |68      |
+*------------------------+--------:--------:--------:--------:--------:--------:
+|index.htm               |200     |7       |7       |11      |3       |33      |
+*------------------------+--------:--------:--------:--------:--------:--------:
+|data.json               |20000   |6       |6       |9       |2       |55      |
+*------------------------+--------:--------:--------:--------:--------:--------:
+|logout.htm              |200     |3       |3       |4       |2       |9       |
+*------------------------+--------:--------:--------:--------:--------:--------:

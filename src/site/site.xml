@@ -12,6 +12,7 @@
 				<item name="Spring MVC Client" href="client-architecture.html" />
 			</item>
                         <item name="Security" href="security.html" />
+                        <item name="Performance" href="performance.html" />
 		</menu>
 		<menu ref="modules" />
 		<menu name="Team Meetings">
