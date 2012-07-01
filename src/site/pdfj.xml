@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
 	<body>
-		<menu ref="parent" inherit="top" />
 		<menu name="Project Specification">
                         <item name="Requirements" href="requirements.html" />
 			<item name="Use Cases" href="use-cases.html" />
@@ -14,11 +13,6 @@
                         <item name="Security" href="security.html" />
                         <item name="Performance" href="performance.html" />
 		</menu>
-		<menu ref="modules" />
-		<menu name="Team Meetings">
-			<item name="Minutes" href="https://github.com/gosia-wielgus/jms-brokers/downloads" />
-		</menu>
-		<menu ref="reports" inherit="bottom" />
 	</body><skin>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-default-skin</artifactId>
