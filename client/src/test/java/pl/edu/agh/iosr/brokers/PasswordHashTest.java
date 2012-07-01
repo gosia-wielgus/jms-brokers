@@ -11,10 +11,13 @@ public class PasswordHashTest {
 		assertPasswordEqual("hello");
 		assertPasswordEqual("a password that is correct090@#$@$@#$)()\n");
 		assertPasswordsNotEqual("a","b");
-		
-		System.out.println(PasswordHash.fromPassword("password").toString());
 	}
 
+	@Test
+	public void testBackwardComp() {
+		assertTrue(PasswordHash.fromHash(":ff440858bbfefc54:7f31f02213d5e20418972cd8f244d4c0a55b1aeb").compareToPassword("password"));
+	}
+	
 	public void assertPasswordEqual(String p1) {
 		assertPasswords(p1, p1, true);
 	}
