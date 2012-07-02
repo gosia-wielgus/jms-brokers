@@ -49,8 +49,8 @@
 <a class="jxr_linenumber" name="39" href="#39">39</a>  	<strong class="jxr_keyword">public</strong> Set&lt;StockIndex&gt; getAllLatest() {
 <a class="jxr_linenumber" name="40" href="#40">40</a>  		List&lt;String&gt; names = sessionFactory.getCurrentSession().createQuery(<span class="jxr_string">"select distinct name from StockIndex index"</span>).list();
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		Set&lt;StockIndex&gt; ret = <strong class="jxr_keyword">new</strong> HashSet&lt;StockIndex&gt;();
-<a class="jxr_linenumber" name="42" href="#42">42</a>  		<strong class="jxr_keyword">for</strong> (String name : names){
-<a class="jxr_linenumber" name="43" href="#43">43</a>  			Query query = sessionFactory.getCurrentSession().createQuery(<span class="jxr_string">"from StockIndex index where index.name = ? order by timestamp desc"</span>);
+<a class="jxr_linenumber" name="42" href="#42">42</a>  		Query query = sessionFactory.getCurrentSession().createQuery(<span class="jxr_string">"from StockIndex index where index.name = ? order by timestamp desc"</span>);
+<a class="jxr_linenumber" name="43" href="#43">43</a>  		<strong class="jxr_keyword">for</strong> (String name : names){
 <a class="jxr_linenumber" name="44" href="#44">44</a>  			query.setString(0, name);
 <a class="jxr_linenumber" name="45" href="#45">45</a>  			query.setMaxResults(1);
 <a class="jxr_linenumber" name="46" href="#46">46</a>  			StockIndex ind = (StockIndex) query.list().get(0);
