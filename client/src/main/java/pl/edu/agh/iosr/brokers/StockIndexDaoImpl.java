@@ -39,8 +39,8 @@ public class StockIndexDaoImpl implements StockIndexDao {
 	public Set<StockIndex> getAllLatest() {
 		List<String> names = sessionFactory.getCurrentSession().createQuery("select distinct name from StockIndex index").list();
 		Set<StockIndex> ret = new HashSet<StockIndex>();
+		Query query = sessionFactory.getCurrentSession().createQuery("from StockIndex index where index.name = ? order by timestamp desc");
 		for (String name : names){
-			Query query = sessionFactory.getCurrentSession().createQuery("from StockIndex index where index.name = ? order by timestamp desc");
 			query.setString(0, name);
 			query.setMaxResults(1);
 			StockIndex ind = (StockIndex) query.list().get(0);
